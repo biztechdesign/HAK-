@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 96 96" role="img" aria-hidden="true">
+  <circle cx="48" cy="48" r="46" fill="#EEF0FA"/>
+  <circle cx="48" cy="48" r="46" fill="none" stroke="#2D3487" stroke-width="3"/>
+  <circle cx="48" cy="48" r="38" fill="#FFFFFF" stroke="#2D3487" stroke-width="1.5" stroke-dasharray="2 3"/>
+  <text x="48" y="36" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="11" font-weight="700" fill="#2D3487" letter-spacing="1">DUBAI</text>
+  <text x="48" y="56" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="18" font-weight="800" fill="#171923">DC</text>
+  <rect x="30" y="63" width="36" height="3" rx="1.5" fill="#F36A35"/>
+  <text x="48" y="77" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="8" font-weight="600" fill="#475467">MEMBER</text>
+</svg>

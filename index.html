@@ -12,14 +12,14 @@
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@400;500;600;700&family=Inter:wght@400;500;600;700&family=Gabarito:wght@600;700&display=swap">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20..48,200..300,0..1,0&display=block">
 
-  <link rel="stylesheet" href="assets/css/tokens.css?v=0.73.5">
-  <link rel="stylesheet" href="assets/css/styles.css?v=0.73.5">
-  <link rel="stylesheet" href="assets/css/components.css?v=0.73.5">
-  <link rel="stylesheet" href="assets/css/home.css?v=0.73.5">
+  <link rel="stylesheet" href="assets/css/tokens.css?v=0.74.2">
+  <link rel="stylesheet" href="assets/css/styles.css?v=0.74.2">
+  <link rel="stylesheet" href="assets/css/components.css?v=0.74.2">
+  <link rel="stylesheet" href="assets/css/home.css?v=0.74.2">
 
   <!-- Tailwind CSS v3 Play CDN for the prototype; replace with compiled CSS in production -->
   <script src="https://cdn.tailwindcss.com/3.4.16"></script>
-  <script src="tailwind.config.js?v=0.73.5"></script>
+  <script src="tailwind.config.js?v=0.74.2"></script>
 </head>
 <body>
   <a class="hk-skip-link" href="#main">Skip to content</a>
@@ -426,21 +426,20 @@
           <span class="hk-eyebrow">About HAK Plus</span>
           <h2 class="hk-h3" id="about-title">Corporate gifting, from sourcing to delivery</h2>
           <p>HAK Plus helps businesses across the UAE source branded merchandise their teams and clients value, with in-house printing and a single point of contact.</p>
+          <div class="hk-about-card__certs" aria-labelledby="about-certs-title">
+            <p class="hk-about-card__certs-title" id="about-certs-title">Certified and accredited</p>
+            <ul class="hk-about-certs" role="list">
+              <li class="hk-about-cert"><img src="assets/images/certifications/placeholder-iso-9001.svg" alt="ISO 9001:2015: Quality management" width="96" height="96" loading="lazy"></li>
+              <li class="hk-about-cert"><img src="assets/images/certifications/placeholder-iso-14001.svg" alt="ISO 14001:2015: Environmental management" width="96" height="96" loading="lazy"></li>
+              <li class="hk-about-cert"><img src="assets/images/certifications/placeholder-iso-45001.svg" alt="ISO 45001:2018: Health and safety" width="96" height="96" loading="lazy"></li>
+              <li class="hk-about-cert"><img src="assets/images/certifications/placeholder-chamber.svg" alt="Dubai Chamber: Registered member" width="96" height="96" loading="lazy"></li>
+            </ul>
+          </div>
           <a class="hk-btn hk-btn--lg" href="#" data-route="about">More about us</a>
         </div>
       </div>
     </section>
 
-    <!-- 18 · Certifications -->
-    <section id="certifications" aria-labelledby="cert-title">
-      <div class="hk-container hk-cert-strip">
-        <h2 class="hk-cert-strip__title" id="cert-title">Certified and accredited</h2>
-        <div class="hk-cert"><span class="hk-cert__mark" aria-hidden="true"><span class="material-symbols-rounded">verified</span></span><div><p class="hk-cert__name">ISO 9001:2015</p><p class="hk-cert__text">Quality management</p></div></div>
-        <div class="hk-cert"><span class="hk-cert__mark" aria-hidden="true"><span class="material-symbols-rounded">eco</span></span><div><p class="hk-cert__name">ISO 14001:2015</p><p class="hk-cert__text">Environmental management</p></div></div>
-        <div class="hk-cert"><span class="hk-cert__mark" aria-hidden="true"><span class="material-symbols-rounded">health_and_safety</span></span><div><p class="hk-cert__name">ISO 45001:2018</p><p class="hk-cert__text">Health and safety</p></div></div>
-        <div class="hk-cert"><span class="hk-cert__mark" aria-hidden="true"><span class="material-symbols-rounded">account_balance</span></span><div><p class="hk-cert__name">Dubai Chamber</p><p class="hk-cert__text">Registered member</p></div></div>
-      </div>
-    </section>
 
     <!-- 19 · Blogs (v0.18.0: three equal article cards) -->
     <section class="hk-section" id="blogs" aria-labelledby="blogs-title">
@@ -601,7 +600,7 @@
     </form>
   </dialog>
 
-  <script src="assets/js/main.js?v=0.73.5"></script>
-  <script src="assets/js/home.js?v=0.73.5"></script>
+  <script src="assets/js/main.js?v=0.74.2"></script>
+  <script src="assets/js/home.js?v=0.74.2"></script>
 </body>
 </html>

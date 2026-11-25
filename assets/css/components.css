@@ -3402,3 +3402,22 @@ main .hk-section-head, .hk-split-head { margin-block-end: var(--hk-space-8); }
 .hk-bulk-card--v2 .hk-bulk-card__actions .hk-btn { inline-size: 100%; }
 @media (max-width: 479px) { .hk-bulk-card--v2 .hk-bulk-card__actions .hk-btn { flex: none; } }
 @media (min-width: 1280px) { .hk-bulk-card--v2 .hk-bulk-card__actions { margin-block-end: calc(var(--hk-touch-target) - var(--hk-btn-h-lg)); } }
+
+/* D-123: certifications live inside the About card (the separate strip is removed).
+   Placeholder seals until the genuine marks are supplied; 2 x 2 on wider cards, 1 column on narrow phones. */
+.hk-about-card__certs { inline-size: 100%; margin-block-start: var(--hk-space-2); padding-block-start: var(--hk-space-5); border-block-start: var(--hk-border-1) solid var(--hk-color-border); }
+.hk-about-card__certs-title { margin: 0 0 var(--hk-space-4); font-size: var(--hk-text-body-sm); font-weight: var(--hk-weight-semibold); color: var(--hk-color-text-primary); }
+.hk-about-certs { display: grid; gap: var(--hk-space-4) var(--hk-space-6); grid-template-columns: minmax(0, 1fr); list-style: none; margin: 0; padding: 0; }
+@media (min-width: 420px) { .hk-about-certs { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+.hk-about-cert { display: flex; align-items: center; gap: var(--hk-space-3); min-inline-size: 0; }
+.hk-about-cert img { flex-shrink: 0; inline-size: 3rem; block-size: 3rem; }
+.hk-about-cert > span { display: flex; flex-direction: column; min-inline-size: 0; }
+.hk-about-cert__name { font-size: var(--hk-text-body-sm); font-weight: var(--hk-weight-semibold); line-height: 1.3; color: var(--hk-color-text-primary); }
+.hk-about-cert__text { font-size: 0.8125rem; line-height: 1.4; color: var(--hk-color-text-secondary); }
+.hk-about-card .hk-about-card__certs + .hk-btn { margin-block-start: var(--hk-space-2); }
+
+/* D-123 (client): logos only, one row — no names or descriptions beside them. The alt text names each certificate. */
+.hk-about-certs { display: flex; flex-wrap: nowrap; gap: var(--hk-space-4); grid-template-columns: none; }
+.hk-about-cert { flex: 0 1 3.5rem; min-inline-size: 0; }
+.hk-about-cert img { inline-size: 100%; max-inline-size: 3.5rem; block-size: auto; aspect-ratio: 1; }
+@media (max-width: 379px) { .hk-about-certs { gap: var(--hk-space-3); } .hk-about-cert { flex-basis: 3rem; } }

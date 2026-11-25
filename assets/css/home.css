@@ -65,17 +65,15 @@ main .hk-section-head { margin-block-end: var(--hk-space-8); }
 :root { --hp-section-space: clamp(2rem, 1.6rem + 1.6vw, 3.5rem); }
 .hk-newsletter-band { padding-block-start: calc(var(--hp-section-space) * 2);  }
 .hp-benefits { padding-block: var(--hp-section-space) 0; }
-#certifications .hk-cert-strip { padding-block: var(--hk-space-6); border-block-end: var(--hk-border-1) solid var(--hk-color-border); }
 
 /* v0.38.0 — one gap between every section (D-78): 120 px on desktop → 64 px on phones.
    Sections carry no vertical padding of their own; the gap is a single margin, so it never doubles up.
    Attached pairs: hero + trust bar, About photo + certification strip. */
 :root { --hp-gap: clamp(2.5rem, 1.1rem + 3.4vw, 4rem); } /* 40 → 64 px (D-80) */
-main > .hk-section, main > .hp-benefits, main > #certifications, main > .hk-newsletter-band { padding-block: 0; }
+main > .hk-section, main > .hp-benefits, main > .hk-newsletter-band { padding-block: 0; }
 main > .hp-hero { padding-block-end: 0; }
 main > section + section { margin-block-start: var(--hp-gap); }
 main > .hp-benefits { margin-block-start: var(--hk-space-6); }
-main > #certifications { margin-block-start: 0; }
 main > .hk-about-band .hk-about-band__inner { padding-block: var(--hk-section-y); }
 .hk-newsletter-band { background: var(--hk-color-surface); } /* D-85: dark card on white; no band colour */
 
@@ -83,3 +81,9 @@ main > .hk-about-band .hk-about-band__inner { padding-block: var(--hk-section-y)
 main .hk-section-head, .hk-split-head { margin-block-end: var(--hk-space-6); }
 /* Corporate events: eyebrow + heading like Festivals; 12 px heading-to-description (D-113) */
 .hk-event-index__main .hk-h2 { margin-block-end: var(--hk-space-3); }
+
+/* D-122: Printing — 32 px from the split heading to the steps and image (was 90 px: heading margin + row gap +
+   vertical centring of the step list against the taller image). Both columns start at the top. */
+#printing .hk-pstep__head { margin-block-end: 0; }
+#printing .hk-pstep { row-gap: var(--hk-space-8); }
+@media (min-width: 1024px) { #printing .hk-pstep__main, #printing .hk-pstep__visual { align-self: start; } }
