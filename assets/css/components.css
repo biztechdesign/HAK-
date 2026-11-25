@@ -3431,3 +3431,9 @@ main .hk-section-head, .hk-split-head { margin-block-end: var(--hk-space-8); }
 .hk-about-cert { flex: 0 0 3.75rem; }
 .hk-about-cert img { max-inline-size: none; inline-size: 3.75rem; block-size: 3.75rem; }
 @media (max-width: 379px) { .hk-about-cert { flex-basis: 3.25rem; } .hk-about-cert img { inline-size: 3.25rem; block-size: 3.25rem; } }
+
+/* D-126: certification marks as a compact, left-aligned group (not spread across the card): 60 px marks
+   (56 px under 380 px), 20 px apart, wrapping on narrow screens; 16 px above and below the divider. */
+.hk-about-card__certs { margin-block-start: 0; padding-block-start: var(--hk-space-4); }
+.hk-about-certs { justify-content: flex-start; flex-wrap: wrap; gap: var(--hk-space-5); }
+@media (max-width: 379px) { .hk-about-certs { gap: var(--hk-space-5); } .hk-about-cert { flex-basis: 3.5rem; } .hk-about-cert img { inline-size: 3.5rem; block-size: 3.5rem; } }
