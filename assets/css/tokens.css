@@ -1,0 +1,372 @@
+/* ==========================================================================
+   HAK Plus — Design tokens  (v0.1.0 · phase 2 · provisional brand values)
+   Level 1: primitives  →  Level 2: semantic  →  Level 3: component
+   Components must use semantic (or component) tokens, never primitives.
+   Global tokens change only with explicit approval (see design-decisions.md).
+   ========================================================================== */
+
+:root {
+  /* ------------------------------------------------------------------------
+     LEVEL 1 · PRIMITIVES
+     ------------------------------------------------------------------------ */
+
+  /* Indigo — brand primary (anchor 500 = #2D3487, provisional) */
+  --hk-indigo-50:  #EEF0FA;
+  --hk-indigo-100: #DDE0F4;
+  --hk-indigo-200: #B8BEE5;
+  --hk-indigo-300: #848DCE;
+  --hk-indigo-400: #535DAE;
+  --hk-indigo-500: #2D3487;
+  --hk-indigo-600: #252B70;
+  --hk-indigo-700: #1D2259;
+  --hk-indigo-800: #151943;
+  --hk-indigo-900: #10132F;
+
+  /* Orange — brand accent (anchor 500 = #F36A35, provisional) */
+  --hk-orange-50:  #FFF3ED;
+  --hk-orange-100: #FFE4D6;
+  --hk-orange-200: #FFC6AC;
+  --hk-orange-300: #FFA17B;
+  --hk-orange-400: #FF8455;
+  --hk-orange-500: #F36A35;
+  --hk-orange-600: #D95020;
+  --hk-orange-700: #B83F15;
+  --hk-orange-800: #8F3012;
+  --hk-orange-900: #66230E;
+
+  /* Cool neutrals — interface */
+  --hk-neutral-0:   #FFFFFF;
+  --hk-neutral-50:  #F5F6FA;
+  --hk-neutral-100: #EDEFF4;
+  --hk-neutral-200: #E2E5EB;
+  --hk-neutral-300: #CDD2DB;
+  --hk-neutral-400: #858E9E;  /* darkened from #98A1B0 so input borders reach 3:1 */
+  --hk-neutral-500: #667085;
+  --hk-neutral-600: #4F5869;
+  --hk-neutral-700: #3A4150;
+  --hk-neutral-800: #252A36;
+  --hk-neutral-900: #171923;
+
+  /* Warm neutrals — editorial & photography surfaces only */
+  --hk-warm-50:  #F8F7F4;  /* warm ivory */
+  --hk-warm-100: #F2EEE7;
+  --hk-warm-200: #EDE5D8;  /* soft sand */
+  --hk-warm-300: #D4C7B5;  /* warm stone */
+  --hk-warm-400: #B3A38C;
+  --hk-warm-500: #8C7B64;
+  --hk-warm-600: #6B5D4B;
+  --hk-warm-700: #4E4437;
+
+  /* Functional */
+  --hk-green-50:  #EDF7F0;
+  --hk-green-200: #B7DFC4;
+  --hk-green-600: #15803D;
+  --hk-green-800: #166534;
+  --hk-amber-50:  #FEF6E7;
+  --hk-amber-200: #F5D49A;
+  --hk-amber-600: #B45309;
+  --hk-amber-800: #92400E;
+  --hk-red-50:  #FDEDED;
+  --hk-red-200: #F6C2C2;
+  --hk-red-600: #DC2626;
+  --hk-red-700: #B91C1C;
+  --hk-blue-50:  #EEF4FF;
+  --hk-blue-200: #BFD3FB;
+  --hk-blue-600: #2563EB;
+  --hk-blue-700: #1D4ED8;
+
+  /* Font families */
+  --hk-font-heading: 'Gabarito', ui-sans-serif, system-ui, -apple-system, 'Segoe UI', sans-serif;
+  --hk-font-body: 'Inter', ui-sans-serif, system-ui, -apple-system, 'Segoe UI', sans-serif;
+  --hk-font-arabic: 'IBM Plex Sans Arabic', 'Segoe UI', Tahoma, sans-serif;
+  --hk-font-mono: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+
+  /* Font weights */
+  --hk-weight-regular: 400;
+  --hk-weight-medium: 500;
+  --hk-weight-semibold: 600;
+  --hk-weight-bold: 700;
+  --hk-weight-extrabold: 800;
+
+  /* Font sizes — fluid between 375 px and 1440 px viewports, frozen above 1440 */
+  /* Type scale — stepped per breakpoint (D-80, final refinement brief):
+     mobile <768 · tablet 768–1023 · desktop 1024–1439 · large ≥1440 */
+  --hk-text-display: 2.25rem;   /* hero        36 / 44 / 52 / 56 */
+  --hk-text-h1:      2rem;      /*             32 / 40 / 44 / 48 */
+  --hk-text-h2:      1.625rem;  /* section     26 / 30 / 34 / 36 */
+  --hk-text-h3:      1.5rem;    /* promotional 24 / 26 / 30 / 32 */
+  --hk-text-h4:      1.25rem;   /*             20 / 22 / 24 / 24 */
+  --hk-text-h5:      1.0625rem; /* card title  17 / 18 / 18 / 18 */
+  --hk-text-h6:      1rem;      /* card title  16 */
+  --hk-text-body-lg: clamp(1rem, 0.956rem + 0.188vw, 1.125rem);    /* 16 → 18 */
+  --hk-text-body:    1rem;      /* 16 */
+  --hk-text-body-sm: 0.875rem;  /* 14 */
+  --hk-text-caption: 0.75rem;   /* 12 */
+  --hk-text-price:   clamp(1.125rem, 1.081rem + 0.188vw, 1.25rem); /* 18 → 20 */
+
+  /* Line heights */
+  --hk-leading-display: 1.08;
+  --hk-leading-h1: 1.1;
+  --hk-leading-h2: 1.2;
+  --hk-leading-h3: 1.2;
+  --hk-leading-h4: 1.25;
+  --hk-leading-h5: 1.3;
+  --hk-leading-body: 1.6;
+  --hk-leading-ui: 1.45;
+  --hk-leading-tight: 1.2;
+  --hk-leading-arabic-offset: 0.15; /* added to every line height under :lang(ar) */
+
+  /* Letter spacing */
+  --hk-tracking-display: -0.01em;
+  --hk-tracking-h1: -0.005em;
+  --hk-tracking-h2: 0;
+  --hk-tracking-normal: 0;
+  --hk-tracking-caps: 0.04em; /* only for rare short labels; avoid uppercase */
+
+  /* Spacing — 8-point foundation with 2/4/12/20 fine steps */
+  --hk-space-0: 0;
+  --hk-space-0-5: 0.125rem; /* 2 */
+  --hk-space-1: 0.25rem;    /* 4 */
+  --hk-space-2: 0.5rem;     /* 8 */
+  --hk-space-3: 0.75rem;    /* 12 */
+  --hk-space-4: 1rem;       /* 16 */
+  --hk-space-5: 1.25rem;    /* 20 */
+  --hk-space-6: 1.5rem;     /* 24 */
+  --hk-space-8: 2rem;       /* 32 */
+  --hk-space-10: 2.5rem;    /* 40 */
+  --hk-space-12: 3rem;      /* 48 */
+  --hk-space-14: 3.5rem;    /* 56 */
+  --hk-space-16: 4rem;      /* 64 */
+  --hk-space-18: 4.5rem;    /* 72 */
+  --hk-space-20: 5rem;      /* 80 */
+  --hk-space-24: 6rem;      /* 96 */
+  --hk-space-28: 7rem;      /* 112 */
+  --hk-space-32: 8rem;      /* 128 */
+
+  /* Border widths */
+  --hk-border-1: 1px;
+  --hk-border-2: 2px;
+
+  /* Radius */
+  --hk-radius-none: 0;
+  --hk-radius-xs: 2px;
+  --hk-radius-sm: 4px;
+  --hk-radius-md: 6px;
+  --hk-radius-base: 8px;
+  --hk-radius-lg: 12px;
+  --hk-radius-xl: 16px;
+  --hk-radius-full: 9999px;
+
+  /* Shadows — tinted with indigo-900, deliberately soft */
+  --hk-shadow-0: none;
+  --hk-shadow-1: 0 1px 2px rgba(16, 19, 47, 0.06);
+  --hk-shadow-2: 0 2px 8px -2px rgba(16, 19, 47, 0.10), 0 1px 2px rgba(16, 19, 47, 0.04);
+  --hk-shadow-3: 0 10px 28px -8px rgba(16, 19, 47, 0.16), 0 2px 6px rgba(16, 19, 47, 0.05);
+  --hk-shadow-4: 0 18px 44px -14px rgba(16, 19, 47, 0.22);
+  --hk-shadow-5: 0 28px 72px -18px rgba(16, 19, 47, 0.30);
+
+  /* Motion */
+  --hk-duration-instant: 0ms;
+  --hk-duration-fast: 120ms;
+  --hk-duration-standard: 200ms;
+  --hk-duration-moderate: 280ms;
+  --hk-duration-slow: 400ms;
+  --hk-ease-standard: cubic-bezier(0.2, 0, 0, 1);   /* hover, state change, expand/collapse */
+  --hk-ease-enter: cubic-bezier(0.05, 0.7, 0.1, 1); /* surfaces entering */
+  --hk-ease-exit: cubic-bezier(0.3, 0, 0.8, 0.15);  /* surfaces leaving */
+  --hk-ease-linear: linear;                         /* backdrop fades, progress */
+
+  /* Breakpoints (reference only — CSS custom properties cannot be used in media queries) */
+  --hk-bp-sm: 640px;
+  --hk-bp-md: 768px;
+  --hk-bp-lg: 1024px;
+  --hk-bp-xl: 1280px;
+  --hk-bp-2xl: 1536px;
+  --hk-bp-3xl: 1920px;
+
+  /* Z-index */
+  --hk-z-base: 0;
+  --hk-z-raised: 10;
+  --hk-z-dropdown: 100;
+  --hk-z-sticky: 200;
+  --hk-z-header: 300;
+  --hk-z-overlay: 400;
+  --hk-z-drawer: 500;
+  --hk-z-modal: 600;
+  --hk-z-toast: 700;
+  --hk-z-tooltip: 800;
+
+  /* ------------------------------------------------------------------------
+     LEVEL 2 · SEMANTIC
+     ------------------------------------------------------------------------ */
+
+  /* Brand */
+  --hk-color-brand: var(--hk-indigo-500);
+  --hk-color-brand-accent: var(--hk-orange-500);
+
+  /* Backgrounds / surfaces */
+  --hk-color-bg-page: var(--hk-neutral-0);
+  --hk-color-bg-alt: var(--hk-neutral-50);
+  --hk-color-bg-warm: var(--hk-warm-50);
+  --hk-color-bg-sand: var(--hk-warm-200);
+  --hk-color-bg-product: var(--hk-warm-50);
+  --hk-color-bg-brand: var(--hk-indigo-500);
+  --hk-color-bg-brand-deep: var(--hk-indigo-800);
+  --hk-color-bg-brand-soft: var(--hk-indigo-50);
+  --hk-color-bg-accent-soft: var(--hk-orange-50);
+  --hk-color-surface: var(--hk-neutral-0);
+  --hk-color-surface-elevated: var(--hk-neutral-0);
+  --hk-color-surface-sunken: var(--hk-neutral-50);
+
+  /* Text */
+  --hk-color-text-primary: var(--hk-neutral-900);
+  --hk-color-text-secondary: var(--hk-neutral-600);
+  --hk-color-text-muted: var(--hk-neutral-500);
+  --hk-color-text-disabled: var(--hk-neutral-400);
+  --hk-color-text-inverse: var(--hk-neutral-0);
+  --hk-color-text-inverse-muted: var(--hk-indigo-100);
+  --hk-color-text-brand: var(--hk-indigo-500);
+  --hk-color-text-accent: var(--hk-orange-700);   /* orange text that passes AA on white */
+  --hk-color-text-on-sand: var(--hk-warm-700);
+  --hk-color-text-link: var(--hk-indigo-500);
+  --hk-color-text-link-hover: var(--hk-indigo-700);
+
+  /* Borders */
+  --hk-color-border: var(--hk-neutral-200);
+  --hk-color-border-subtle: var(--hk-neutral-100);
+  --hk-color-border-strong: var(--hk-neutral-400);   /* ≥3:1 on white for input boundaries */
+  --hk-color-border-interactive: var(--hk-indigo-500);
+  --hk-color-border-selected: var(--hk-indigo-500);
+  --hk-color-border-error: var(--hk-red-600);
+  --hk-color-border-success: var(--hk-green-600);
+
+  /* Actions */
+  --hk-color-action-primary: var(--hk-indigo-500);
+  --hk-color-action-primary-hover: var(--hk-indigo-600);
+  --hk-color-action-primary-active: var(--hk-indigo-700);
+  --hk-color-action-primary-text: var(--hk-neutral-0);
+  --hk-color-action-accent: var(--hk-orange-500);
+  --hk-color-action-accent-hover: var(--hk-orange-400);
+  --hk-color-action-accent-active: var(--hk-orange-600);
+  --hk-color-action-accent-text: var(--hk-neutral-900);  /* white fails on #F36A35 */
+  --hk-color-action-neutral: var(--hk-neutral-100);
+  --hk-color-action-neutral-hover: var(--hk-neutral-200);
+  --hk-color-action-danger: var(--hk-red-700);
+  --hk-color-action-danger-hover: #991B1B;
+  --hk-color-interactive-hover: var(--hk-neutral-50);
+  --hk-color-interactive-hover-brand: var(--hk-indigo-50);
+  --hk-color-selected: var(--hk-indigo-50);
+  --hk-color-selected-text: var(--hk-indigo-600);
+  --hk-color-disabled-surface: var(--hk-neutral-100);
+  --hk-color-disabled-text: var(--hk-neutral-400);
+  --hk-color-disabled-border: var(--hk-neutral-200);
+
+  /* Focus */
+  --hk-color-focus-ring: var(--hk-indigo-500);
+  --hk-color-focus-ring-inverse: var(--hk-orange-300);
+  --hk-focus-ring-width: 2px;
+  --hk-focus-ring-offset: 2px;
+
+  /* Feedback */
+  --hk-color-success: var(--hk-green-600);
+  --hk-color-success-bg: var(--hk-green-50);
+  --hk-color-success-border: var(--hk-green-200);
+  --hk-color-success-text: var(--hk-green-800);
+  --hk-color-warning: var(--hk-amber-600);
+  --hk-color-warning-bg: var(--hk-amber-50);
+  --hk-color-warning-border: var(--hk-amber-200);
+  --hk-color-warning-text: var(--hk-amber-800);
+  --hk-color-error: var(--hk-red-600);
+  --hk-color-error-bg: var(--hk-red-50);
+  --hk-color-error-border: var(--hk-red-200);
+  --hk-color-error-text: var(--hk-red-700);
+  --hk-color-info: var(--hk-blue-600);
+  --hk-color-info-bg: var(--hk-blue-50);
+  --hk-color-info-border: var(--hk-blue-200);
+  --hk-color-info-text: var(--hk-blue-700);
+
+  /* Overlay */
+  --hk-color-overlay: rgba(16, 19, 47, 0.48);
+  --hk-color-scrim-image: rgba(16, 19, 47, 0.55);
+
+  /* Semantic spacing */
+  --hk-gap-icon: var(--hk-space-2);
+  --hk-gap-related: var(--hk-space-3);
+  --hk-gap-field: var(--hk-space-5);
+  --hk-gap-stack: var(--hk-space-4);
+  --hk-gap-grid: clamp(0.75rem, 0.434rem + 1.351vw, 1.5rem);        /* 12 → 24 */
+  --hk-gap-heading: clamp(1.5rem, 1.077rem + 1.127vw, 2.5rem);      /* 24 → 40 */
+  --hk-section-y-compact: clamp(1.5rem, 0.866rem + 1.69vw, 3rem);   /* 24 → 48 */
+  --hk-section-y: clamp(2.5rem, 1.866rem + 2.703vw, 5rem);          /* 40 → 80 */
+  --hk-section-y-lg: clamp(3rem, 1.592rem + 6.006vw, 7rem);         /* 48 → 112 */
+  --hk-page-gutter: 1rem;        /* 16 · stepped per breakpoint below (D-51) */
+
+  /* Layout — stepped container (D-51). Max is the CONTENT width; the gutter
+     sits outside it, so the container never exceeds max + 2 × gutter. */
+  --hk-container-max: 100%;      /* fluid below 1280 */
+  --hk-container-wide: 1440px;   /* equals the 1536+ max since D-51; kept for API stability */
+  --hk-container-narrow: 760px;
+  --hk-measure: 68ch;
+
+  /* ------------------------------------------------------------------------
+     LEVEL 3 · COMPONENT (only where semantic tokens are not enough)
+     ------------------------------------------------------------------------ */
+  --hk-btn-h-sm: 2.25rem;    /* 36 */
+  --hk-btn-h-md: 2.75rem;    /* 44 */
+  --hk-btn-h-lg: 3rem;       /* 48 (D-80: matches inputs) */
+  --hk-btn-px-sm: var(--hk-space-3);
+  --hk-btn-px-md: var(--hk-space-5);
+  --hk-btn-px-lg: var(--hk-space-6);
+  --hk-btn-radius: var(--hk-radius-base);
+
+  --hk-input-h: 3rem;        /* 48 (D-80) */
+  --hk-input-h-sm: 2.25rem;
+  --hk-input-px: var(--hk-space-3);
+  --hk-input-radius: var(--hk-radius-base);
+  --hk-input-border: var(--hk-color-border-strong);
+
+  --hk-card-radius: var(--hk-radius-lg);
+  --hk-card-padding: var(--hk-space-4);
+  --hk-media-radius: var(--hk-radius-lg);
+  --hk-banner-radius: var(--hk-radius-xl);
+  --hk-badge-radius: var(--hk-radius-sm);
+
+  --hk-header-h: 4.5rem;          /* 72 desktop */
+  --hk-header-h-mobile: 3.75rem;  /* 60 */
+  --hk-nav-gap: var(--hk-space-6);
+  --hk-announcement-min-h: 2.5rem;
+
+  --hk-modal-w: 35rem;      /* 560 */
+  --hk-modal-w-lg: 50rem;   /* 800 */
+  --hk-drawer-w: 25rem;     /* 400 */
+  --hk-dialog-radius: var(--hk-radius-xl);
+
+  --hk-touch-target: 2.75rem;     /* 44 */
+  --hk-swatch-size: 1.25rem;      /* 20 visual; hit area padded to 32 */
+}
+
+/* Responsive container system (client spec, D-51)
+   320–639 fluid/16 · 640–767 fluid/24 · 768–1279 fluid/32 · 1280–1439 1280/40
+   1440–1535 1320/48 · 1536+ 1440/48 (centred at 1920+) */
+@media (min-width: 640px)  { :root { --hk-page-gutter: 1.5rem; } }
+@media (min-width: 768px)  { :root { --hk-page-gutter: 2rem; } }
+@media (min-width: 1280px) { :root { --hk-page-gutter: 2.5rem; --hk-container-max: 1280px; } }
+@media (min-width: 1440px) { :root { --hk-page-gutter: 3rem; --hk-container-max: 1320px; } }
+@media (min-width: 1536px) { :root { --hk-container-max: 1440px; } }
+
+/* Stepped type scale (D-80) */
+@media (min-width: 768px)  { :root { --hk-text-display: 2.75rem; --hk-text-h1: 2.5rem;  --hk-text-h2: 1.875rem; --hk-text-h3: 1.625rem; --hk-text-h4: 1.375rem; --hk-text-h5: 1.125rem; } }
+@media (min-width: 1024px) { :root { --hk-text-display: 3.25rem; --hk-text-h1: 2.75rem; --hk-text-h2: 2.125rem; --hk-text-h3: 1.875rem; --hk-text-h4: 1.5rem; } }
+@media (min-width: 1440px) { :root { --hk-text-display: 3.5rem;  --hk-text-h1: 3rem;    --hk-text-h2: 2.25rem;  --hk-text-h3: 2rem; } }
+
+/* Ultra-wide: product grids may widen (D-17). */
+@media (min-width: 1920px) {
+  :root { --hk-gap-grid: 1.75rem; }
+}
+
+/* Arabic typography adjustments */
+:lang(ar) {
+  --hk-tracking-display: 0;
+  --hk-tracking-h1: 0;
+  --hk-tracking-h2: 0;
+}

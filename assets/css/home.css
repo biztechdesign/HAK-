@@ -1,0 +1,85 @@
+/* ==========================================================================
+   HAK Plus — Homepage-only styles (v0.2.0)
+   Section rhythm and prototype-only tools. Reusable components live in
+   components.css; nothing here defines new colours, type or radii.
+   ========================================================================== */
+
+/* Anchor offset below the sticky header */
+html { scroll-padding-block-start: calc(var(--hk-header-h-mobile) + var(--hk-space-4)); }
+@media (min-width: 1024px) { html { scroll-padding-block-start: calc(var(--hk-header-h) + 3rem + var(--hk-space-4)); } }
+
+/* Hero + banners sit close to the header; benefits strip directly below */
+.hp-hero { padding-block: var(--hk-space-6) 0; }
+@media (min-width: 1024px) { .hp-hero { padding-block-start: var(--hk-space-8); } }
+.hp-benefits { padding-block: var(--hk-section-y-compact) 0; }
+.hp-benefits__note { margin-block-start: var(--hk-space-2); }
+
+/* Page rhythm: the homepage has 18 sections, so it uses the compact end of the
+   approved spacing scale (40 → 72 px) instead of the editorial maximum. */
+main > .hk-section { padding-block: var(--hp-section-space); }
+main > .hk-section.hk-section--lg { padding-block: clamp(3rem, 2.2rem + 2.4vw, 5rem); }
+main > .hk-section.hk-section--compact { padding-block: var(--hk-space-6); }
+main .hk-section-head { margin-block-end: var(--hk-space-8); }
+
+
+/* Printing: steps in a compact 2 × 2 grid beside a square image */
+
+/* Offers strip sits between products and assistance without a large empty band */
+.hp-offer .hk-strip__text { font-weight: var(--hk-weight-regular); }
+.hp-offer #offers-title { font-weight: var(--hk-weight-semibold); }
+
+/* Product cards: decorative "View product" label; the whole card is the link */
+.hk-product__footer > span.hk-btn { pointer-events: none; }
+
+/* Prototype-only: customer view hides provisional labels */
+.is-customer-mode .hk-provisional,
+.is-customer-mode .hk-provisional-credit { display: none !important; }
+
+/* Prototype-only review switch */
+.hp-review { position: fixed; inset-block-end: var(--hk-space-4); inset-inline-start: var(--hk-space-4); z-index: var(--hk-z-sticky); }
+.hp-review__btn {
+  display: inline-flex; align-items: center; gap: var(--hk-space-2); min-block-size: 2.5rem; padding-inline: var(--hk-space-3) var(--hk-space-4);
+  border-radius: var(--hk-radius-full); background: var(--hk-neutral-900); color: var(--hk-neutral-0); box-shadow: var(--hk-shadow-3);
+  font-size: var(--hk-text-caption); font-weight: var(--hk-weight-semibold);
+}
+.hp-review__btn[aria-pressed='false'] { background: var(--hk-color-surface); color: var(--hk-color-text-primary); border: var(--hk-border-1) solid var(--hk-color-border-strong); }
+.hp-review__btn:focus-visible { outline-color: var(--hk-color-focus-ring); }
+@media (max-width: 639px) {
+  .hp-review__btn { padding-inline: var(--hk-space-3); }
+  .hp-review__btn [data-label] { position: absolute; inline-size: 1px; block-size: 1px; overflow: hidden; clip: rect(0, 0, 0, 0); white-space: nowrap; }
+}
+@media print { .hp-review { display: none; } }
+
+/* Printing section (v0.8.0) */
+#printing .hp-print-head { max-inline-size: 48rem; margin-inline: auto; margin-block-end: var(--hk-space-8); text-align: center; display: flex; flex-direction: column; gap: var(--hk-space-3); }
+/* Printing: "Explore our printing techniques" subsection — 32 px (mobile) / 40 px (≥768) after How it works,
+   24 px between the heading and the method grid (D-117) */
+#printing .hk-pstep { margin-block-end: 0; }
+#printing .hp-methods-head { margin-block-start: var(--hk-space-8); }
+#printing .hp-methods { margin-block-start: var(--hk-space-6); }
+@media (min-width: 768px) { #printing .hp-methods-head { margin-block-start: var(--hk-space-10); } }
+#printing .hp-print-actions { display: flex; flex-wrap: wrap; justify-content: center; gap: var(--hk-space-3); margin-block-start: var(--hk-space-8); }
+#printing .hp-print-note { margin-block-start: var(--hk-space-4); text-align: center; }
+
+/* v0.27.0 — one section rhythm on the white canvas (32 px → 56 px each side, so 64 → 112 px between sections) */
+:root { --hp-section-space: clamp(2rem, 1.6rem + 1.6vw, 3.5rem); }
+.hk-newsletter-band { padding-block-start: calc(var(--hp-section-space) * 2);  }
+.hp-benefits { padding-block: var(--hp-section-space) 0; }
+#certifications .hk-cert-strip { padding-block: var(--hk-space-6); border-block-end: var(--hk-border-1) solid var(--hk-color-border); }
+
+/* v0.38.0 — one gap between every section (D-78): 120 px on desktop → 64 px on phones.
+   Sections carry no vertical padding of their own; the gap is a single margin, so it never doubles up.
+   Attached pairs: hero + trust bar, About photo + certification strip. */
+:root { --hp-gap: clamp(2.5rem, 1.1rem + 3.4vw, 4rem); } /* 40 → 64 px (D-80) */
+main > .hk-section, main > .hp-benefits, main > #certifications, main > .hk-newsletter-band { padding-block: 0; }
+main > .hp-hero { padding-block-end: 0; }
+main > section + section { margin-block-start: var(--hp-gap); }
+main > .hp-benefits { margin-block-start: var(--hk-space-6); }
+main > #certifications { margin-block-start: 0; }
+main > .hk-about-band .hk-about-band__inner { padding-block: var(--hk-section-y); }
+.hk-newsletter-band { background: var(--hk-color-surface); } /* D-85: dark card on white; no band colour */
+
+/* v0.40.0 — tighter heading-to-content distance with the 64 px rhythm */
+main .hk-section-head, .hk-split-head { margin-block-end: var(--hk-space-6); }
+/* Corporate events: eyebrow + heading like Festivals; 12 px heading-to-description (D-113) */
+.hk-event-index__main .hk-h2 { margin-block-end: var(--hk-space-3); }

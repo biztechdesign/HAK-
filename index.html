@@ -1,0 +1,607 @@
+<!doctype html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>HAK Plus | Corporate gifts, promotional merchandise and branding in the UAE</title>
+  <meta name="description" content="Corporate gifts, promotional merchandise and in-house branding for businesses in the UAE. Browse drinkware, bags, technology, stationery and gift sets, or request a quote for bulk orders.">
+  <meta name="robots" content="noindex"><!-- prototype: remove before launch -->
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@400;500;600;700&family=Inter:wght@400;500;600;700&family=Gabarito:wght@600;700&display=swap">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20..48,200..300,0..1,0&display=block">
+
+  <link rel="stylesheet" href="assets/css/tokens.css?v=0.73.1">
+  <link rel="stylesheet" href="assets/css/styles.css?v=0.73.1">
+  <link rel="stylesheet" href="assets/css/components.css?v=0.73.1">
+  <link rel="stylesheet" href="assets/css/home.css?v=0.73.1">
+
+  <!-- Tailwind CSS v3 Play CDN for the prototype; replace with compiled CSS in production -->
+  <script src="https://cdn.tailwindcss.com/3.4.16"></script>
+  <script src="tailwind.config.js?v=0.73.1"></script>
+</head>
+<body>
+  <a class="hk-skip-link" href="#main">Skip to content</a>
+
+  <!-- 01 + 02 · Top bar: announcement ticker (configurable, date-aware) and business links -->
+  <div class="hk-topbar">
+    <div class="hk-container hk-topbar__inner">
+      <div class="hk-ticker" data-hk-ticker role="region" aria-label="Announcements" aria-roledescription="carousel">
+        <button type="button" class="hk-ticker__btn" data-hk-ticker-prev aria-label="Previous announcement"><span class="material-symbols-rounded icon-dir" aria-hidden="true">chevron_left</span></button>
+        <div class="hk-ticker__viewport" aria-live="polite">
+          <p class="hk-ticker__item" data-hk-ticker-item data-hk-campaign data-start="2026-11-01" data-end="2026-12-02">Eid Al Etihad: plan branded gifts for your teams and clients. <a href="#occasions">View gifting</a></p>
+          <p class="hk-ticker__item" data-hk-ticker-item data-hk-campaign data-start="2026-11-15" data-end="2026-12-31">Year-end gifting for clients and teams. <a href="#occasions">See ideas</a></p>
+          <p class="hk-ticker__item" data-hk-ticker-item data-hk-campaign>The HAK Plus catalogue 2025–26 is available. <a href="#" data-route="catalogue">Download</a></p>
+        </div>
+        <button type="button" class="hk-ticker__btn" data-hk-ticker-next aria-label="Next announcement"><span class="material-symbols-rounded icon-dir" aria-hidden="true">chevron_right</span></button>
+      </div>
+      <ul class="hk-topbar__links" role="list">
+        <li><a href="#" data-route="catalogue"><span class="material-symbols-rounded" aria-hidden="true">download</span>Download catalogue 2025–26</a></li>
+        <li><a href="https://www.hakgifts.com/" target="_blank" rel="noopener">Reseller login<span class="sr-only"> (opens in a new tab)</span></a></li>
+        <li><a class="is-accent" href="#" data-route="reseller-registration">Register as a reseller</a></li>
+      </ul>
+    </div>
+  </div>
+
+  <header class="hk-header is-sticky" data-hk-mega-scope>
+    <div class="hk-container hk-header__bar">
+      <button type="button" class="hk-btn hk-btn--icon hk-btn--ghost hk-header__menu-btn" data-hk-dialog-open="mobile-nav" aria-label="Open menu"><span class="material-symbols-rounded" aria-hidden="true">menu</span></button>
+      <a class="hk-header__brand" href="index.html" aria-label="HAK Plus home"><img class="hk-logo-img" src="assets/images/brand/hak-plus-logo.png" alt="" width="439" height="240"></a>
+
+      <div class="hk-header__search hk-search" data-hk-search data-popular="Thermal bottles,Notebooks,Power banks,Lanyards,Gift sets">
+        <label class="sr-only" for="site-search">Search products or SKU</label>
+        <div class="hk-input-group">
+          <span class="hk-input-group__icon"><span class="material-symbols-rounded icon-20" aria-hidden="true">search</span></span>
+          <input class="hk-input" id="site-search" type="search" placeholder="Search products or SKU" autocomplete="off" spellcheck="false">
+          <button type="button" class="hk-input-group__action hk-search__clear" aria-label="Clear search" hidden><span class="material-symbols-rounded icon-20" aria-hidden="true">close</span></button>
+        </div>
+        <div class="hk-search__panel" id="site-search-panel" role="listbox" aria-label="Search suggestions" hidden></div>
+        <p class="sr-only" role="status" aria-live="polite" data-hk-search-status></p>
+      </div>
+
+      <ul class="hk-header__tools" role="list">
+        <li class="hk-header__tools-search"><button type="button" class="hk-tool hk-header__search-btn" data-hk-dialog-open="search-sheet" aria-label="Search products"><span class="material-symbols-rounded" aria-hidden="true">search</span></button></li>
+        <li><a class="hk-tool hk-tool--desktop" href="#" data-route="account"><span class="material-symbols-rounded" aria-hidden="true">person</span><span class="hk-tool__label">Account</span></a></li>
+        <li><a class="hk-tool hk-tool--desktop" href="#" data-route="compare"><span class="material-symbols-rounded" aria-hidden="true">compare_arrows</span><span class="hk-tool__label">Compare</span></a></li>
+        <li><a class="hk-tool hk-tool--desktop" href="#" data-route="wishlist"><span class="material-symbols-rounded" aria-hidden="true">favorite</span><span class="hk-tool__label">Wishlist</span></a></li>
+        <li><a class="hk-tool" href="#" data-route="cart" aria-label="Cart, 0 items"><span class="material-symbols-rounded" aria-hidden="true">shopping_cart</span><span class="hk-tool__label" aria-hidden="true">Cart</span><span class="hk-tool__badge" aria-hidden="true">0</span></a></li>
+      </ul>
+    </div>
+
+    <nav class="hk-nav hk-nav--bar" aria-label="Main">
+      <div class="hk-container">
+        <ul class="hk-nav__list" role="list">
+          <li><button type="button" class="hk-btn hk-nav__cat-btn" aria-expanded="false" aria-controls="mega-categories" data-hk-mega-trigger><span class="material-symbols-rounded" aria-hidden="true">menu</span>All categories<span class="material-symbols-rounded hk-nav__chev" aria-hidden="true">expand_more</span></button></li>
+          <li><a class="hk-link--nav" href="#" data-route="on-demand">On demand</a></li>
+          <li><a class="hk-link--nav" href="#occasions">Occasions</a></li>
+          <li><a class="hk-link--nav" href="#featured">Best sellers</a></li>
+          <li><a class="hk-link--nav" href="#printing">Printing</a></li>
+          <li><a class="hk-link--nav" href="#bulk-orders">Reseller tools</a></li>
+          <li><button type="button" class="hk-nav__callback-link" data-hk-dialog-open="callback-dialog"><span class="material-symbols-rounded" aria-hidden="true">call</span>Request a callback</button></li>
+        </ul>
+      </div>
+    </nav>
+
+    <div class="hk-mega" id="mega-categories" aria-label="All categories">
+      <div class="hk-container hk-mega__inner">
+        <ul class="hk-mega__parents" role="tablist" aria-orientation="vertical" aria-label="Product categories">
+          <li role="presentation"><button type="button" class="hk-mega__parent" role="tab" id="mg-t1" aria-selected="true" aria-controls="mg-p1">Drinkware<span class="material-symbols-rounded icon-dir" aria-hidden="true">chevron_right</span></button></li>
+          <li role="presentation"><button type="button" class="hk-mega__parent" role="tab" id="mg-t2" aria-selected="false" aria-controls="mg-p2">Bags<span class="material-symbols-rounded icon-dir" aria-hidden="true">chevron_right</span></button></li>
+          <li role="presentation"><button type="button" class="hk-mega__parent" role="tab" id="mg-t3" aria-selected="false" aria-controls="mg-p3">Gadgets<span class="material-symbols-rounded icon-dir" aria-hidden="true">chevron_right</span></button></li>
+          <li role="presentation"><button type="button" class="hk-mega__parent" role="tab" id="mg-t4" aria-selected="false" aria-controls="mg-p4">Stationery<span class="material-symbols-rounded icon-dir" aria-hidden="true">chevron_right</span></button></li>
+          <li role="presentation"><button type="button" class="hk-mega__parent" role="tab" id="mg-t5" aria-selected="false" aria-controls="mg-p5">Apparel<span class="material-symbols-rounded icon-dir" aria-hidden="true">chevron_right</span></button></li>
+          <li role="presentation"><button type="button" class="hk-mega__parent" role="tab" id="mg-t6" aria-selected="false" aria-controls="mg-p6">Lanyards and accessories<span class="material-symbols-rounded icon-dir" aria-hidden="true">chevron_right</span></button></li>
+          <li role="presentation"><button type="button" class="hk-mega__parent" role="tab" id="mg-t7" aria-selected="false" aria-controls="mg-p7">Gift sets<span class="material-symbols-rounded icon-dir" aria-hidden="true">chevron_right</span></button></li>
+          <li role="presentation"><button type="button" class="hk-mega__parent" role="tab" id="mg-t8" aria-selected="false" aria-controls="mg-p8">Promotional products<span class="material-symbols-rounded icon-dir" aria-hidden="true">chevron_right</span></button></li>
+          <li role="presentation"><button type="button" class="hk-mega__parent" role="tab" id="mg-t9" aria-selected="false" aria-controls="mg-p9">Kids<span class="material-symbols-rounded icon-dir" aria-hidden="true">chevron_right</span></button></li>
+        </ul>
+        <div>
+          <div class="hk-mega__panel" role="tabpanel" id="mg-p1" aria-labelledby="mg-t1">
+            <div class="hk-mega__panel-head"><p class="hk-h5">Drinkware</p><a class="hk-link--editorial" href="#" data-route="category/drinkware">View all drinkware<span class="material-symbols-rounded icon-dir" aria-hidden="true">arrow_forward</span></a></div>
+            <div><p class="hk-mega__group-title">By type</p><ul class="hk-mega__links" role="list"><li><a href="#" data-route="category/drinkware/bottles">Bottles</a></li><li><a href="#" data-route="category/drinkware/tumblers">Tumblers</a></li><li><a href="#" data-route="category/drinkware/mugs">Mugs</a></li><li><a href="#" data-route="category/gadgets/power-banks">Power banks</a></li></ul></div>
+          </div>
+          <div class="hk-mega__panel" role="tabpanel" id="mg-p2" aria-labelledby="mg-t2" hidden>
+            <div class="hk-mega__panel-head"><p class="hk-h5">Bags</p><a class="hk-link--editorial" href="#" data-route="category/bags">View all bags<span class="material-symbols-rounded icon-dir" aria-hidden="true">arrow_forward</span></a></div>
+            <div><p class="hk-mega__group-title">Everyday and travel</p><ul class="hk-mega__links" role="list"><li><a href="#" data-route="category/bags/backpacks">Backpacks</a></li><li><a href="#" data-route="category/bags/laptop-sleeves">Laptop sleeves</a></li><li><a href="#" data-route="category/bags/travel-pouches">Travel pouches</a></li><li><a href="#" data-route="category/bags/cooler-bags">Cooler bags</a></li><li><a href="#" data-route="category/bags/string-bags">String bags</a></li></ul></div>
+            <div><p class="hk-mega__group-title">Shopping bags</p><ul class="hk-mega__links" role="list"><li><a href="#" data-route="category/bags/cotton">Cotton bags</a></li><li><a href="#" data-route="category/bags/canvas">Canvas bags</a></li><li><a href="#" data-route="category/bags/jute">Jute bags</a></li><li><a href="#" data-route="category/bags/non-woven">Non-woven bags</a></li><li><a href="#" data-route="category/bags/paper">Paper bags</a></li></ul></div>
+          </div>
+          <div class="hk-mega__panel" role="tabpanel" id="mg-p3" aria-labelledby="mg-t3" hidden>
+            <div class="hk-mega__panel-head"><p class="hk-h5">Gadgets</p><a class="hk-link--editorial" href="#" data-route="category/gadgets">View all gadgets<span class="material-symbols-rounded icon-dir" aria-hidden="true">arrow_forward</span></a></div>
+            <div><p class="hk-mega__group-title">Power and audio</p><ul class="hk-mega__links" role="list"><li><a href="#" data-route="category/gadgets/wireless-chargers">Wireless chargers</a></li><li><a href="#" data-route="category/gadgets/power-banks">Power banks</a></li><li><a href="#" data-route="category/gadgets/speakers">Bluetooth speakers</a></li></ul></div>
+            <div><p class="hk-mega__group-title">Accessories</p><ul class="hk-mega__links" role="list"><li><a href="#" data-route="category/gadgets/mobile-holders">Mobile holders</a></li><li><a href="#" data-route="category/gadgets/usb-cables">USB cables</a></li><li><a href="#" data-route="category/gadgets/mouse-pads">Mouse pads</a></li><li><a href="#" data-route="category/gadgets/travel-adapters">Travel adapters</a></li></ul></div>
+          </div>
+          <div class="hk-mega__panel" role="tabpanel" id="mg-p4" aria-labelledby="mg-t4" hidden>
+            <div class="hk-mega__panel-head"><p class="hk-h5">Stationery</p><a class="hk-link--editorial" href="#" data-route="category/stationery">View all stationery<span class="material-symbols-rounded icon-dir" aria-hidden="true">arrow_forward</span></a></div>
+            <div><p class="hk-mega__group-title">Notebooks and organisers</p><ul class="hk-mega__links" role="list"><li><a href="#" data-route="category/stationery/a5-notebooks">A5 notebooks</a></li><li><a href="#" data-route="category/stationery/a6-notebooks">A6 notebooks</a></li><li><a href="#" data-route="category/stationery/organisers">Organisers</a></li></ul></div>
+            <div><p class="hk-mega__group-title">Writing instruments</p><ul class="hk-mega__links" role="list"><li><a href="#" data-route="category/stationery/metal-pens">Metal pens</a></li><li><a href="#" data-route="category/stationery/plastic-pens">Plastic pens</a></li><li><a href="#" data-route="category/stationery/eco-pens">Eco-friendly pens</a></li><li><a href="#" data-route="category/stationery/pencils">Pencils</a></li><li><a href="#" data-route="category/stationery/pen-boxes">Pen boxes</a></li></ul></div>
+          </div>
+          <div class="hk-mega__panel" role="tabpanel" id="mg-p5" aria-labelledby="mg-t5" hidden>
+            <div class="hk-mega__panel-head"><p class="hk-h5">Apparel</p><a class="hk-link--editorial" href="#" data-route="category/apparel">View all apparel<span class="material-symbols-rounded icon-dir" aria-hidden="true">arrow_forward</span></a></div>
+            <div><ul class="hk-mega__links" role="list"><li><a href="#" data-route="category/apparel/caps">Caps</a></li></ul></div>
+          </div>
+          <div class="hk-mega__panel" role="tabpanel" id="mg-p6" aria-labelledby="mg-t6" hidden>
+            <div class="hk-mega__panel-head"><p class="hk-h5">Lanyards and accessories</p><a class="hk-link--editorial" href="#" data-route="category/lanyards">View all<span class="material-symbols-rounded icon-dir" aria-hidden="true">arrow_forward</span></a></div>
+            <div><ul class="hk-mega__links" role="list"><li><a href="#" data-route="category/lanyards/lanyards">Lanyards</a></li><li><a href="#" data-route="category/lanyards/reel-badges">Reel badges</a></li><li><a href="#" data-route="category/lanyards/id-card-holders">ID card holders</a></li></ul></div>
+          </div>
+          <div class="hk-mega__panel" role="tabpanel" id="mg-p7" aria-labelledby="mg-t7" hidden>
+            <div class="hk-mega__panel-head"><p class="hk-h5">Gift sets</p><a class="hk-link--editorial" href="#" data-route="category/gift-sets">View all gift sets<span class="material-symbols-rounded icon-dir" aria-hidden="true">arrow_forward</span></a></div>
+            <div><ul class="hk-mega__links" role="list"><li><a href="#" data-route="category/gift-sets/ready">Ready gift sets</a></li><li><a href="#" data-route="category/gift-sets/custom">Custom gift sets</a></li></ul></div>
+          </div>
+          <div class="hk-mega__panel" role="tabpanel" id="mg-p8" aria-labelledby="mg-t8" hidden>
+            <div class="hk-mega__panel-head"><p class="hk-h5">Promotional products</p><a class="hk-link--editorial" href="#" data-route="category/promotional">View all<span class="material-symbols-rounded icon-dir" aria-hidden="true">arrow_forward</span></a></div>
+            <div><ul class="hk-mega__links" role="list"><li><a href="#" data-route="category/promotional/keychains">Keychains</a></li><li><a href="#" data-route="category/promotional/sun-shades">Sun shades</a></li><li><a href="#" data-route="category/promotional/mouse-pads">Mouse pads</a></li><li><a href="#" data-route="category/promotional/stress-balls">Stress balls</a></li><li><a href="#" data-route="category/promotional/wristbands">Wristbands</a></li><li><a href="#" data-route="category/promotional/badges">Badges</a></li></ul></div>
+          </div>
+          <div class="hk-mega__panel" role="tabpanel" id="mg-p9" aria-labelledby="mg-t9" hidden>
+            <div class="hk-mega__panel-head"><p class="hk-h5">Kids</p><a class="hk-link--editorial" href="#" data-route="category/kids">View all<span class="material-symbols-rounded icon-dir" aria-hidden="true">arrow_forward</span></a></div>
+            <p class="hk-body-sm hk-text-secondary">School outreach, family-day and CSR giveaways.</p>
+          </div>
+        </div>
+        <div class="hk-mega__feature">
+          <div class="hk-media hk-media--4x3"><img src="assets/images/banners/custom-gift-box.webp" alt="" width="800" height="600" loading="lazy"></div>
+          <p class="hk-h6">Custom gift sets</p>
+          <p class="hk-body-sm hk-text-secondary">Combine products into one branded set.</p>
+          <a class="hk-link--editorial" href="#" data-route="category/gift-sets/custom">Build a gift set<span class="material-symbols-rounded icon-dir" aria-hidden="true">arrow_forward</span></a>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main id="main" tabindex="-1">
+
+    <!-- 03 + 04 · Showcase bento: hero card + four configurable banner tiles -->
+    <section class="hp-hero" id="collections" aria-labelledby="hero-title">
+      <div class="hk-container">
+        <div class="hk-showcase" data-hk-banner-row>
+          <div class="hk-showcase__hero hk-showcase__hero--photo">
+            <div class="hk-showcase__hero-media"><img src="assets/images/banners/hero-gift-set.webp" alt="Navy branded bottle, notebook, pen and mug beside a kraft gift box tied with navy ribbon" width="1635" height="962" fetchpriority="high"></div>
+            <div class="hk-showcase__hero-body">
+              <h1 class="hk-display" id="hero-title"><span class="hk-hero-line">Your brand.</span> <span class="hk-hero-line">Made memorable.</span></h1>
+              <p>Corporate gifts, promotional merchandise and professional branding, tailored to your business.</p>
+              <div class="hk-showcase__actions">
+                <a class="hk-btn hk-btn--accent hk-btn--lg" href="#bulk-orders">Request a quote</a>
+                <a class="hk-btn hk-btn--inverse-outline hk-btn--lg" href="#categories">Explore products</a>
+              </div>
+            </div>
+          </div>
+          <article class="hk-showcase__tile hk-showcase__tile--accent hk-showcase__tile--photo" style="--_bg:#FBEEE9" data-hk-campaign data-order="1">
+            <div class="hk-showcase__body"><h2 class="hk-showcase__title">Premium corporate gifts</h2><p class="hk-showcase__text">Executive pieces for clients and leadership.</p><a class="hk-showcase__link" href="#" data-route="collection/premium-corporate-gifts">View collection<span class="material-symbols-rounded icon-dir" aria-hidden="true">arrow_forward</span></a></div>
+            <div class="hk-showcase__media"><img src="assets/images/banners/premium-gift-set.webp" alt="" width="1600" height="558" loading="lazy"></div>
+          </article>
+          <article class="hk-showcase__tile hk-showcase__tile--photo" style="--_bg:#F2F5FF" data-hk-campaign data-order="2">
+            <div class="hk-showcase__body"><h2 class="hk-showcase__title">New arrivals</h2><p class="hk-showcase__text">The latest tech, drinkware and stationery.</p><a class="hk-showcase__link" href="#featured">See what’s new<span class="material-symbols-rounded icon-dir" aria-hidden="true">arrow_forward</span></a></div>
+            <div class="hk-showcase__media"><img src="assets/images/banners/new-arrivals-stand.webp" alt="" width="1600" height="558" loading="lazy"></div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- 05 · Business benefits -->
+    <section class="hp-benefits" aria-labelledby="benefits-title">
+      <div class="hk-container">
+        <h2 class="sr-only" id="benefits-title">Why businesses choose HAK Plus</h2>
+        <ul class="hk-usp-panel hk-usp-panel--bar" role="list">
+          <li><span class="hk-usp-panel__icon"><span class="material-symbols-rounded" aria-hidden="true">inventory_2</span></span><div><p class="hk-usp-panel__title">Wide product range</p><p class="hk-usp-panel__text">Drinkware, bags, tech, gift sets</p></div></li>
+          <li><span class="hk-usp-panel__icon"><span class="material-symbols-rounded" aria-hidden="true">print</span></span><div><p class="hk-usp-panel__title">In-house branding</p><p class="hk-usp-panel__text">Printing, engraving, embroidery</p></div></li>
+          <li><span class="hk-usp-panel__icon"><span class="material-symbols-rounded" aria-hidden="true">package_2</span></span><div><p class="hk-usp-panel__title">Bulk-order support</p><p class="hk-usp-panel__text">Quotes for teams and campaigns</p></div></li>
+          <li><span class="hk-usp-panel__icon"><span class="material-symbols-rounded" aria-hidden="true">local_shipping</span></span><div><p class="hk-usp-panel__title">UAE-wide delivery</p><p class="hk-usp-panel__text">Lead times confirmed per order</p></div></li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- 06 · Shop by category (v0.18.0: square category cards, label below) -->
+    <section class="hk-section" id="categories" aria-labelledby="categories-title">
+      <div class="hk-container">
+        <div class="hk-section-head">
+          <div class="hk-section-head__text"><span class="hk-eyebrow">Product collections</span><h2 class="hk-h2" id="categories-title">Shop by category</h2></div>
+          <a class="hk-link--editorial" href="#" data-route="products">View all products<span class="material-symbols-rounded icon-dir" aria-hidden="true">arrow_forward</span></a>
+        </div>
+        <ul class="hk-cat-cards" role="list">
+          <li class="hk-cat-card"><span class="hk-cat-card__media"><img src="assets/images/categories/hk534-barakah-gift-set.webp" alt="" width="405" height="329" loading="lazy"></span><a class="hk-cat-card__name" href="#" data-route="category/gift-sets/ready">Ready gift sets</a></li>
+          <li class="hk-cat-card"><span class="hk-cat-card__media"><img src="assets/images/categories/hk0511-astoria-gift-set.webp" alt="" width="362" height="304" loading="lazy"></span><a class="hk-cat-card__name" href="#" data-route="category/gift-sets/custom">Custom gift sets</a></li>
+          <li class="hk-cat-card"><span class="hk-cat-card__media"><img src="assets/images/categories/hk0506-retentir-speaker.webp" alt="" width="341" height="208" loading="lazy"></span><a class="hk-cat-card__name" href="#" data-route="category/gadgets/speakers">Bluetooth speakers</a></li>
+          <li class="hk-cat-card"><span class="hk-cat-card__media"><img src="assets/images/categories/hk0449-cogent-power-bank.webp" alt="" width="197" height="304" loading="lazy"></span><a class="hk-cat-card__name" href="#" data-route="category/gadgets/power-banks">Power banks</a></li>
+          <li class="hk-cat-card"><span class="hk-cat-card__media"><img src="assets/images/categories/hk0432-cruet-bottle.webp" alt="" width="150" height="440" loading="lazy"></span><a class="hk-cat-card__name" href="#" data-route="category/drinkware/bottles">Bottles</a></li>
+          <li class="hk-cat-card"><span class="hk-cat-card__media"><img src="assets/images/categories/hk296-dentro-tumblers.webp" alt="" width="400" height="387" loading="lazy"></span><a class="hk-cat-card__name" href="#" data-route="category/drinkware/tumblers">Tumblers</a></li>
+          <li class="hk-cat-card"><span class="hk-cat-card__media"><img src="assets/images/categories/hk295-fysis-mugs.webp" alt="" width="401" height="388" loading="lazy"></span><a class="hk-cat-card__name" href="#" data-route="category/drinkware/mugs">Mugs</a></li>
+          <li class="hk-cat-card"><span class="hk-cat-card__media"><img src="assets/images/categories/hk0459-biro-pen.webp" alt="" width="64" height="443" loading="lazy"></span><a class="hk-cat-card__name" href="#" data-route="category/stationery/pens">Pens</a></li>
+          <li class="hk-cat-card"><span class="hk-cat-card__media"><img src="assets/images/categories/hk0446-ecoflex-notebook.webp" alt="" width="323" height="448" loading="lazy"></span><a class="hk-cat-card__name" href="#" data-route="category/stationery/notebooks">Notebooks</a></li>
+          <li class="hk-cat-card"><span class="hk-cat-card__media"><img src="assets/images/categories/hk0472-vigor-organiser.webp" alt="" width="399" height="252" loading="lazy"></span><a class="hk-cat-card__name" href="#" data-route="category/stationery/organisers">Organisers</a></li>
+          <li class="hk-cat-card"><span class="hk-cat-card__media"><img src="assets/images/categories/hk317-cyrus-cap.webp" alt="" width="413" height="488" loading="lazy"></span><a class="hk-cat-card__name" href="#" data-route="category/apparel/caps">Caps</a></li>
+          <li class="hk-cat-card"><span class="hk-cat-card__media"><img src="assets/images/categories/hk0514-pioneer-laptop-sleeve.jpg" alt="" width="413" height="488" loading="lazy"></span><a class="hk-cat-card__name" href="#" data-route="category/bags/laptop-sleeves">Laptop sleeves</a></li>
+          <li class="hk-cat-card"><span class="hk-cat-card__media"><img src="assets/images/categories/hk0426-batoh-backpack.webp" alt="" width="323" height="447" loading="lazy"></span><a class="hk-cat-card__name" href="#" data-route="category/bags">Bags</a></li>
+          <li class="hk-cat-card"><span class="hk-cat-card__media"><img src="assets/images/categories/hk0052-geina-cotton-bag.webp" alt="" width="235" height="406" loading="lazy"></span><a class="hk-cat-card__name" href="#" data-route="category/bags/cotton">Cotton bags</a></li>
+          <li class="hk-cat-card"><span class="hk-cat-card__media"><img src="assets/images/categories/hk0516-grippy-keychain.webp" alt="" width="128" height="338" loading="lazy"></span><a class="hk-cat-card__name" href="#" data-route="category/promotional/keychains">Keychains</a></li>
+          <li class="hk-cat-card"><span class="hk-cat-card__media"><img src="assets/images/categories/hk182-garrett-lanyards.webp" alt="" width="376" height="481" loading="lazy"></span><a class="hk-cat-card__name" href="#" data-route="category/lanyards">Lanyards</a></li>
+          <li class="hk-cat-card"><span class="hk-cat-card__media"><img src="assets/images/categories/hk0471-affiche-bamboo-notebook.webp" alt="" width="293" height="406" loading="lazy"></span><a class="hk-cat-card__name" href="#" data-route="collection/eco-friendly">Eco-friendly products</a></li>
+          <li class="hk-cat-card"><span class="hk-cat-card__media"><img src="assets/images/categories/hk540-nezumi-mouse.png" alt="" width="413" height="488" loading="lazy"></span><a class="hk-cat-card__name" href="#" data-route="category/gadgets/electronic-accessories">Electronic accessories</a></li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- 11 · Featured products (v0.18.0: tabs in the heading row; plain cards) -->
+    <section class="hk-section" id="featured" aria-labelledby="featured-title">
+      <div class="hk-container hk-tabs hk-tabs--compact">
+        <div class="hk-section-head">
+          <div class="hk-section-head__text"><span class="hk-eyebrow">Featured products</span><h2 class="hk-h2" id="featured-title">Popular with our clients</h2></div>
+          <div class="hk-tabs__list hk-tabs__list--line" role="tablist" aria-label="Product selection">
+            <button type="button" class="hk-tab" role="tab" id="fp-t1" aria-selected="true" aria-controls="fp-p1">Best sellers</button>
+            <button type="button" class="hk-tab" role="tab" id="fp-t2" aria-selected="false" aria-controls="fp-p2">New arrivals</button>
+            <button type="button" class="hk-tab" role="tab" id="fp-t3" aria-selected="false" aria-controls="fp-p3">Offers</button>
+          </div>
+        </div>
+        <div class="hk-tabpanel" role="tabpanel" id="fp-p1" aria-labelledby="fp-t1" tabindex="0"><div class="hk-carousel hk-shop-carousel" data-hk-carousel data-hk-autoslide data-interval="4500" aria-roledescription="carousel" aria-label="Best sellers"><ul class="hk-carousel__track hk-shop-track" role="list" data-hk-carousel-track data-hk-products="featured"></ul><div class="hk-shop-more"><div class="hk-carousel__controls"><button type="button" class="hk-carousel__btn hk-carousel__btn--primary" data-hk-carousel-prev aria-label="Previous best sellers"><span class="material-symbols-rounded icon-dir" aria-hidden="true">chevron_left</span></button><button type="button" class="hk-carousel__btn hk-carousel__btn--primary" data-hk-carousel-next aria-label="Next best sellers"><span class="material-symbols-rounded icon-dir" aria-hidden="true">chevron_right</span></button></div></div></div></div>
+        <div class="hk-tabpanel" role="tabpanel" id="fp-p2" aria-labelledby="fp-t2" tabindex="0" hidden><div class="hk-carousel hk-shop-carousel" data-hk-carousel data-hk-autoslide data-interval="4500" aria-roledescription="carousel" aria-label="New arrivals"><ul class="hk-carousel__track hk-shop-track" role="list" data-hk-carousel-track data-hk-products="new"></ul><div class="hk-shop-more"><div class="hk-carousel__controls"><button type="button" class="hk-carousel__btn hk-carousel__btn--primary" data-hk-carousel-prev aria-label="Previous new arrivals"><span class="material-symbols-rounded icon-dir" aria-hidden="true">chevron_left</span></button><button type="button" class="hk-carousel__btn hk-carousel__btn--primary" data-hk-carousel-next aria-label="Next new arrivals"><span class="material-symbols-rounded icon-dir" aria-hidden="true">chevron_right</span></button></div></div></div></div>
+        <div class="hk-tabpanel" role="tabpanel" id="fp-p3" aria-labelledby="fp-t3" tabindex="0" hidden><div class="hk-carousel hk-shop-carousel" data-hk-carousel data-hk-autoslide data-interval="4500" aria-roledescription="carousel" aria-label="Offers"><ul class="hk-carousel__track hk-shop-track" role="list" data-hk-carousel-track data-hk-products="offers"></ul><div class="hk-shop-more"><div class="hk-carousel__controls"><button type="button" class="hk-carousel__btn hk-carousel__btn--primary" data-hk-carousel-prev aria-label="Previous offers"><span class="material-symbols-rounded icon-dir" aria-hidden="true">chevron_left</span></button><button type="button" class="hk-carousel__btn hk-carousel__btn--primary" data-hk-carousel-next aria-label="Next offers"><span class="material-symbols-rounded icon-dir" aria-hidden="true">chevron_right</span></button></div></div></div></div>
+        <noscript><p class="hk-body-sm">Enable JavaScript to see products, or <a class="hk-link" href="#categories">browse categories</a>.</p></noscript>
+        <div class="hk-shop-more hk-shop-more--center"><a class="hk-btn hk-btn--secondary" href="#" data-route="products/best-sellers" data-hk-featured-more>View all best sellers</a></div>
+      </div>
+    </section>
+
+    <!-- 08 · Festivals and occasions (v0.21.0: paged carousel of portrait cards, no dates) -->
+    <section class="hk-section" id="occasions" aria-labelledby="occasions-title">
+      <div class="hk-container hk-carousel" data-hk-carousel data-hk-carousel-paged role="region" aria-roledescription="carousel" aria-labelledby="occasions-title">
+        <div class="hk-section-head">
+          <div class="hk-section-head__text"><span class="hk-eyebrow">Festivals and occasions</span><h2 class="hk-h2" id="occasions-title">Gifts for the dates that matter</h2></div>
+          <div class="hk-carousel__controls">
+            <button type="button" class="hk-carousel__btn hk-carousel__btn--primary" data-hk-carousel-prev aria-label="Previous occasions"><span class="material-symbols-rounded icon-dir" aria-hidden="true">chevron_left</span></button>
+            <button type="button" class="hk-carousel__btn hk-carousel__btn--primary" data-hk-carousel-next aria-label="Next occasions"><span class="material-symbols-rounded icon-dir" aria-hidden="true">chevron_right</span></button>
+          </div>
+        </div>
+        <ul class="hk-carousel__track hk-carousel__track--4" role="list" data-hk-carousel-track>
+          <li class="hk-occ-tile"><div class="hk-occ-tile__media"><img src="assets/images/occasions/uae-national-day.webp" alt="" width="750" height="1000" loading="lazy"></div><h3 class="hk-occ-tile__name"><a href="#" data-route="occasions/uae-national-day">UAE National Day</a></h3><p class="hk-occ-tile__text">Gifts in the colours of the UAE flag</p></li>
+          <li class="hk-occ-tile"><div class="hk-occ-tile__media"><img src="assets/images/occasions/christmas.webp" alt="" width="750" height="1000" loading="lazy"></div><h3 class="hk-occ-tile__name"><a href="#" data-route="occasions/christmas">Christmas</a></h3><p class="hk-occ-tile__text">Year-end gifts for clients and teams</p></li>
+          <li class="hk-occ-tile"><div class="hk-occ-tile__media"><img src="assets/images/occasions/new-year.webp" alt="" width="750" height="1000" loading="lazy"></div><h3 class="hk-occ-tile__name"><a href="#" data-route="occasions/new-year">New Year</a></h3><p class="hk-occ-tile__text">Desk essentials to start the year</p></li>
+          <li class="hk-occ-tile"><div class="hk-occ-tile__media"><img src="assets/images/occasions/chinese-new-year.webp" alt="" width="750" height="1000" loading="lazy"></div><h3 class="hk-occ-tile__name"><a href="#" data-route="occasions/chinese-new-year">Chinese New Year</a></h3><p class="hk-occ-tile__text">Lucky red gifts for the lunar year</p></li>
+          <li class="hk-occ-tile"><div class="hk-occ-tile__media"><img src="assets/images/occasions/ramadan-and-eid.webp" alt="" width="750" height="1000" loading="lazy"></div><h3 class="hk-occ-tile__name"><a href="#" data-route="occasions/ramadan-eid">Ramadan and Eid</a></h3><p class="hk-occ-tile__text">Hampers and gifts for the holy month</p></li>
+          <li class="hk-occ-tile"><div class="hk-occ-tile__media"><img src="assets/images/occasions/international-womens-day.webp" alt="" width="750" height="1000" loading="lazy"></div><h3 class="hk-occ-tile__name"><a href="#" data-route="occasions/womens-day">International Women’s Day</a></h3><p class="hk-occ-tile__text">Gifts to celebrate the women on your team</p></li>
+          <li class="hk-occ-tile"><div class="hk-occ-tile__media hk-occ-tile__media--product"><img src="assets/images/products/hk295-fysis-mugs.webp" alt="" width="413" height="488" loading="lazy"></div><h3 class="hk-occ-tile__name"><a href="#" data-route="occasions/mothers-day">Mother’s Day</a></h3><p class="hk-occ-tile__text">Thoughtful gifts your team can share at home</p></li>
+          <li class="hk-occ-tile"><div class="hk-occ-tile__media"><img src="assets/images/occasions/diwali.webp" alt="" width="1000" height="750" loading="lazy"></div><h3 class="hk-occ-tile__name"><a href="#" data-route="occasions/diwali">Diwali</a></h3><p class="hk-occ-tile__text">Festive gifts for the festival of lights</p></li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- 09 · Corporate events (v0.49.0: numbered event index with descriptions + photo panel with quote CTA) -->
+    <section class="hk-section" id="events" aria-labelledby="events-title" aria-describedby="events-desc">
+      <div class="hk-container hk-event-index">
+        <div class="hk-event-index__main">
+                    <span class="hk-eyebrow">Corporate events</span>
+                    <h2 class="hk-h2" id="events-title">Branded merchandise for every event</h2>
+          <p class="hk-event-index__intro" id="events-desc">From exhibition giveaways to anniversary keepsakes, choose an event to see the branded merchandise that suits it.</p>
+          <div class="hk-event-index__list" role="tablist" aria-label="Event types" aria-orientation="vertical" data-hk-hover-tabs data-hk-autotabs data-interval="5000">
+            <button type="button" class="hk-event-tab" role="tab" id="ev-t1" aria-selected="true" aria-controls="ev-p1"><span class="hk-event-tab__num" aria-hidden="true">01</span><span><span class="hk-event-tab__title">Exhibitions and trade shows</span><span class="hk-event-tab__desc">Giveaways that draw visitors to your stand</span></span><span class="material-symbols-rounded icon-dir" aria-hidden="true">arrow_forward</span></button>
+            <button type="button" class="hk-event-tab" role="tab" id="ev-t2" aria-selected="false" aria-controls="ev-p2"><span class="hk-event-tab__num" aria-hidden="true">02</span><span><span class="hk-event-tab__title">Conferences and seminars</span><span class="hk-event-tab__desc">Delegate kits, lanyards and notebooks</span></span><span class="material-symbols-rounded icon-dir" aria-hidden="true">arrow_forward</span></button>
+            <button type="button" class="hk-event-tab" role="tab" id="ev-t3" aria-selected="false" aria-controls="ev-p3"><span class="hk-event-tab__num" aria-hidden="true">03</span><span><span class="hk-event-tab__title">Corporate meetings</span><span class="hk-event-tab__desc">Branded essentials for the meeting room</span></span><span class="material-symbols-rounded icon-dir" aria-hidden="true">arrow_forward</span></button>
+            <button type="button" class="hk-event-tab" role="tab" id="ev-t4" aria-selected="false" aria-controls="ev-p4"><span class="hk-event-tab__num" aria-hidden="true">04</span><span><span class="hk-event-tab__title">Product launches</span><span class="hk-event-tab__desc">Merchandise that makes a launch memorable</span></span><span class="material-symbols-rounded icon-dir" aria-hidden="true">arrow_forward</span></button>
+            <button type="button" class="hk-event-tab" role="tab" id="ev-t5" aria-selected="false" aria-controls="ev-p5"><span class="hk-event-tab__num" aria-hidden="true">05</span><span><span class="hk-event-tab__title">Corporate anniversaries</span><span class="hk-event-tab__desc">Keepsakes to mark company milestones</span></span><span class="material-symbols-rounded icon-dir" aria-hidden="true">arrow_forward</span></button>
+          </div>
+          <div class="hk-event-index__actions">
+            <a class="hk-link--editorial hk-event-index__more" href="#" data-route="events">View all corporate events<span class="material-symbols-rounded icon-dir" aria-hidden="true">arrow_forward</span></a>
+          </div>
+        </div>
+        <div class="hk-event-index__media">
+          <div class="hk-event-panel" role="tabpanel" id="ev-p1" aria-labelledby="ev-t1" tabindex="0"><img src="assets/images/events/exhibitions-and-trade-shows.webp" alt="Branded tote bags, caps, bottles and notebooks displayed at an exhibition stand" width="1200" height="800" loading="lazy"><div class="hk-event-panel__bar"><div class="hk-event-panel__info"><p class="hk-event-panel__title">Exhibitions and trade shows</p><a class="hk-link--editorial" href="#" data-route="events/exhibitions">View gift ideas<span class="material-symbols-rounded icon-dir" aria-hidden="true">arrow_forward</span></a></div><a class="hk-btn hk-btn--accent hk-event-panel__cta" href="#" data-route="request-a-quote?event=exhibitions-and-trade-shows" data-quote-context="Exhibitions and trade shows">Request a quote</a></div></div>
+          <div class="hk-event-panel" role="tabpanel" id="ev-p2" aria-labelledby="ev-t2" tabindex="0" hidden><img src="assets/images/events/conferences-and-seminars.webp" alt="Delegate kit with notebook, pen, bottle and tote on a conference table" width="1200" height="800" loading="lazy"><div class="hk-event-panel__bar"><div class="hk-event-panel__info"><p class="hk-event-panel__title">Conferences and seminars</p><a class="hk-link--editorial" href="#" data-route="events/conferences">View gift ideas<span class="material-symbols-rounded icon-dir" aria-hidden="true">arrow_forward</span></a></div><a class="hk-btn hk-btn--accent hk-event-panel__cta" href="#" data-route="request-a-quote?event=conferences-and-seminars" data-quote-context="Conferences and seminars">Request a quote</a></div></div>
+          <div class="hk-event-panel" role="tabpanel" id="ev-p3" aria-labelledby="ev-t3" tabindex="0" hidden><img src="assets/images/events/corporate-meetings.webp" alt="Branded notebook, mug, bottle and desk accessories laid out in a meeting room" width="1200" height="800" loading="lazy"><div class="hk-event-panel__bar"><div class="hk-event-panel__info"><p class="hk-event-panel__title">Corporate meetings</p><a class="hk-link--editorial" href="#" data-route="events/corporate-meetings">View gift ideas<span class="material-symbols-rounded icon-dir" aria-hidden="true">arrow_forward</span></a></div><a class="hk-btn hk-btn--accent hk-event-panel__cta" href="#" data-route="request-a-quote?event=corporate-meetings" data-quote-context="Corporate meetings">Request a quote</a></div></div>
+          <div class="hk-event-panel" role="tabpanel" id="ev-p4" aria-labelledby="ev-t4" tabindex="0" hidden><img src="assets/images/events/product-launches.webp" alt="Branded headphones, chargers and tech gifts displayed at a launch event" width="1200" height="800" loading="lazy"><div class="hk-event-panel__bar"><div class="hk-event-panel__info"><p class="hk-event-panel__title">Product launches</p><a class="hk-link--editorial" href="#" data-route="events/product-launches">View gift ideas<span class="material-symbols-rounded icon-dir" aria-hidden="true">arrow_forward</span></a></div><a class="hk-btn hk-btn--accent hk-event-panel__cta" href="#" data-route="request-a-quote?event=product-launches" data-quote-context="Product launches">Request a quote</a></div></div>
+          <div class="hk-event-panel" role="tabpanel" id="ev-p5" aria-labelledby="ev-t5" tabindex="0" hidden><img src="assets/images/events/corporate-anniversaries.webp" alt="Trophies, gift boxes and keepsakes arranged for a company anniversary" width="1200" height="800" loading="lazy"><div class="hk-event-panel__bar"><div class="hk-event-panel__info"><p class="hk-event-panel__title">Corporate anniversaries</p><a class="hk-link--editorial" href="#" data-route="events/corporate-anniversaries">View gift ideas<span class="material-symbols-rounded icon-dir" aria-hidden="true">arrow_forward</span></a></div><a class="hk-btn hk-btn--accent hk-event-panel__cta" href="#" data-route="request-a-quote?event=corporate-anniversaries" data-quote-context="Corporate anniversaries">Request a quote</a></div></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 10 · Gifts by recipient (v0.50.0: two compact recipient banners, no section head) -->
+    <section class="hk-section" id="gifting" aria-labelledby="gifting-title">
+      <div class="hk-container">
+        <div class="hk-section-head">
+          <div class="hk-section-head__text"><span class="hk-eyebrow">Gifts by recipient</span><h2 class="hk-h2" id="gifting-title">Gifts that build relationships</h2></div>
+        </div>
+        <div class="hk-recipient-cards">
+          <article class="hk-recipient-card" aria-labelledby="rc-employee">
+            <div class="hk-recipient-card__body">
+              <span class="hk-eyebrow">Employee gifting</span>
+              <h3 class="hk-recipient-card__title" id="rc-employee">Celebrate your people.</h3>
+              <p class="hk-recipient-card__text">Welcome new talent, recognise achievements and celebrate milestones.</p>
+              <ul class="hk-recipient-card__list" role="list"><li><span class="material-symbols-rounded" aria-hidden="true">check</span><span>Welcome kits</span></li><li><span class="material-symbols-rounded" aria-hidden="true">check</span><span>Employee anniversaries</span></li><li><span class="material-symbols-rounded" aria-hidden="true">check</span><span>Employee appreciation</span></li></ul>
+              <div class="hk-recipient-card__cta"><a class="hk-btn hk-btn--secondary" href="#" data-route="gifting/employees" aria-describedby="rc-employee">Explore gifts</a></div>
+            </div>
+            <div class="hk-recipient-card__media"><img src="assets/images/gifting/employee-gifting.webp" alt="" width="1200" height="800" loading="lazy"></div>
+          </article>
+          <article class="hk-recipient-card hk-recipient-card--partner" aria-labelledby="rc-partner">
+            <div class="hk-recipient-card__body">
+              <span class="hk-eyebrow">Client and partner gifting</span>
+              <h3 class="hk-recipient-card__title" id="rc-partner">Build stronger connections.</h3>
+              <p class="hk-recipient-card__text">Make every business relationship more meaningful.</p>
+              <ul class="hk-recipient-card__list" role="list"><li><span class="material-symbols-rounded" aria-hidden="true">check</span><span>Client appreciation</span></li><li><span class="material-symbols-rounded" aria-hidden="true">check</span><span>Business partner gifts</span></li><li><span class="material-symbols-rounded" aria-hidden="true">check</span><span>VIP and executive gifts</span></li></ul>
+              <div class="hk-recipient-card__cta"><a class="hk-btn hk-btn--secondary" href="#" data-route="gifting/partners" aria-describedby="rc-partner">Explore gifts</a></div>
+            </div>
+            <div class="hk-recipient-card__media"><img src="assets/images/gifting/client-and-partner-gifting.webp" alt="" width="1200" height="800" loading="lazy"></div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- 07 · Printing and personalisation (v0.24.0: split head, step strip, method tiles) -->
+    <section class="hk-section" id="printing" aria-labelledby="printing-title">
+      <div class="hk-container">
+        <div class="hk-pstep" data-hk-pstep data-interval="4500">
+          <div class="hk-split-head hk-pstep__head">
+          <div class="hk-split-head__title"><span class="hk-eyebrow">Printing and personalisation</span><h2 class="hk-h2" id="printing-title">Your brand, brought to life</h2></div>
+          <div class="hk-split-head__aside">
+            <p class="hk-text-secondary">We match the branding method to each product’s material, quantity and finish, so your logo looks right on every piece.</p>
+          </div>
+        </div>
+
+          <div class="hk-pstep__main">
+            <ol class="hk-pstep__list" aria-label="How branded orders work">
+            <li class="hk-pstep__item is-active" data-hk-step>
+              <button type="button" class="hk-pstep__btn" aria-current="step" aria-controls="hk-pstep-visual">
+                <span class="hk-pstep__num" aria-hidden="true">01</span>
+                <span class="hk-pstep__text"><span class="hk-pstep__title">Choose products</span><span class="hk-pstep__desc">Pick from the catalogue or share your brief, and we shortlist the right items.</span></span>
+              </button>
+            </li>
+            <li class="hk-pstep__item" data-hk-step>
+              <button type="button" class="hk-pstep__btn" aria-current="false" aria-controls="hk-pstep-visual">
+                <span class="hk-pstep__num" aria-hidden="true">02</span>
+                <span class="hk-pstep__text"><span class="hk-pstep__title">Share your branding</span><span class="hk-pstep__desc">Send your logo, colours and placement; we advise on the best printing method.</span></span>
+              </button>
+            </li>
+            <li class="hk-pstep__item" data-hk-step>
+              <button type="button" class="hk-pstep__btn" aria-current="false" aria-controls="hk-pstep-visual">
+                <span class="hk-pstep__num" aria-hidden="true">03</span>
+                <span class="hk-pstep__text"><span class="hk-pstep__title">Approve artwork and quote</span><span class="hk-pstep__desc">Review the digital mock-up and written quotation before anything is produced.</span></span>
+              </button>
+            </li>
+            <li class="hk-pstep__item" data-hk-step>
+              <button type="button" class="hk-pstep__btn" aria-current="false" aria-controls="hk-pstep-visual">
+                <span class="hk-pstep__num" aria-hidden="true">04</span>
+                <span class="hk-pstep__text"><span class="hk-pstep__title">Production and delivery</span><span class="hk-pstep__desc">We brand, quality-check, pack and deliver your order across the UAE.</span></span>
+              </button>
+            </li>
+            </ol>
+          </div>
+          <div class="hk-pstep__visual" id="hk-pstep-visual" aria-hidden="true">
+            <div class="hk-pstep__frame">
+                <img class="hk-pstep__img is-active" data-hk-step-img src="assets/images/process/step-1.webp" alt="" width="1400" height="830" loading="lazy">
+                <img class="hk-pstep__img" data-hk-step-img src="assets/images/process/step-2.webp" alt="" width="1383" height="800" loading="lazy">
+                <img class="hk-pstep__img" data-hk-step-img src="assets/images/process/step-3.webp" alt="" width="1150" height="634" loading="lazy">
+                <img class="hk-pstep__img" data-hk-step-img src="assets/images/process/step-4.webp" alt="" width="1400" height="820" loading="lazy">
+            </div>
+          </div>
+        </div>
+        <div class="hk-subhead hk-subhead--section hp-methods-head">
+          <h3 class="hk-subhead__title" id="methods-title">Explore our printing techniques</h3>
+          <a class="hk-link--editorial" href="#" data-route="printing-methods">View all methods<span class="material-symbols-rounded icon-dir" aria-hidden="true">arrow_forward</span></a>
+        </div>
+        <ul class="hk-method-grid hp-methods" role="list" aria-labelledby="methods-title">
+          <li class="hk-method-tile"><div class="hk-method-tile__media hk-method-tile__media--photo"><img src="assets/images/printing/method-laser-engraving.webp" alt="Close-up of a geometric logo laser-engraved on a navy metal bottle" width="504" height="504" loading="lazy"></div><div class="hk-method-tile__head"><h3 class="hk-method-tile__name"><a href="#" data-route="printing-methods/laser-engraving">Laser engraving</a></h3><span class="material-symbols-rounded icon-dir" aria-hidden="true">arrow_forward</span></div><p class="hk-method-tile__best">Best for bottles, pens, power banks</p></li>
+          <li class="hk-method-tile"><div class="hk-method-tile__media hk-method-tile__media--photo"><img src="assets/images/printing/method-embroidery.webp" alt="Close-up of a raised chevron logo embroidered on a navy cap" width="504" height="504" loading="lazy"></div><div class="hk-method-tile__head"><h3 class="hk-method-tile__name"><a href="#" data-route="printing-methods/embroidery">Embroidery</a></h3><span class="material-symbols-rounded icon-dir" aria-hidden="true">arrow_forward</span></div><p class="hk-method-tile__best">Best for caps, apparel, bags</p></li>
+          <li class="hk-method-tile"><div class="hk-method-tile__media hk-method-tile__media--photo"><img src="assets/images/printing/method-screen-printing.webp" alt="Close-up of a bold navy and orange design screen-printed on a canvas tote" width="504" height="504" loading="lazy"></div><div class="hk-method-tile__head"><h3 class="hk-method-tile__name"><a href="#" data-route="printing-methods/screen-printing">Screen printing</a></h3><span class="material-symbols-rounded icon-dir" aria-hidden="true">arrow_forward</span></div><p class="hk-method-tile__best">Best for T-shirts, totes, textiles</p></li>
+          <li class="hk-method-tile"><div class="hk-method-tile__media hk-method-tile__media--photo"><img src="assets/images/printing/method-pad-printing.webp" alt="Close-up of a small white logo pad-printed on a blue metal pen" width="504" height="504" loading="lazy"></div><div class="hk-method-tile__head"><h3 class="hk-method-tile__name"><a href="#" data-route="printing-methods/pad-printing">Pad printing</a></h3><span class="material-symbols-rounded icon-dir" aria-hidden="true">arrow_forward</span></div><p class="hk-method-tile__best">Best for pens, keychains, gadgets</p></li>
+          <li class="hk-method-tile"><div class="hk-method-tile__media hk-method-tile__media--photo"><img src="assets/images/printing/method-uv-printing.webp" alt="Close-up of a full-colour gradient design UV-printed on a notebook cover" width="504" height="504" loading="lazy"></div><div class="hk-method-tile__head"><h3 class="hk-method-tile__name"><a href="#" data-route="printing-methods/uv-printing">UV printing</a></h3><span class="material-symbols-rounded icon-dir" aria-hidden="true">arrow_forward</span></div><p class="hk-method-tile__best">Best for notebooks, gift boxes, gadgets</p></li>
+          <li class="hk-method-tile"><div class="hk-method-tile__media hk-method-tile__media--photo"><img src="assets/images/printing/method-heat-transfer.webp" alt="Close-up of a multicolour logo heat-transferred onto a grey T-shirt" width="504" height="504" loading="lazy"></div><div class="hk-method-tile__head"><h3 class="hk-method-tile__name"><a href="#" data-route="printing-methods/heat-transfer">Heat transfer</a></h3><span class="material-symbols-rounded icon-dir" aria-hidden="true">arrow_forward</span></div><p class="hk-method-tile__best">Best for apparel, lanyards, bags</p></li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- 14 · Reseller + bulk orders (v0.25.0: benefit tiles; bulk card with mascot slot) -->
+    <section class="hk-section" id="bulk-orders" aria-labelledby="reseller-title">
+      <div class="hk-container hk-biz-split">
+        <div class="hk-reseller-card hk-reseller-card--v2">
+          <div class="hk-reseller-card__content">
+            <span class="hk-eyebrow">For resellers</span>
+            <h2 class="hk-reseller-card__title" id="reseller-title">Grow your business with HAK Plus</h2>
+            <p class="hk-reseller-card__text">Corporate merchandise sourcing and wholesale opportunities for promotional product resellers.</p>
+            <div class="hk-reseller-card__actions">
+              <a class="hk-btn hk-btn--accent hk-btn--lg" href="#" data-route="reseller-registration">Become a reseller</a>
+              <a class="hk-reseller-card__login" href="https://www.hakgifts.com/" target="_blank" rel="noopener">Reseller login<span class="material-symbols-rounded" aria-hidden="true">open_in_new</span><span class="sr-only"> (opens in a new tab)</span></a>
+            </div>
+          </div>
+          <ul class="hk-benefit-tiles" role="list" aria-label="Reseller benefits">
+            <li class="hk-benefit-tile"><span class="material-symbols-rounded" aria-hidden="true">sell</span><p class="hk-benefit-tile__title">Trade pricing</p><p class="hk-benefit-tile__text">Tiered reseller prices</p></li>
+            <li class="hk-benefit-tile"><span class="material-symbols-rounded" aria-hidden="true">monitoring</span><p class="hk-benefit-tile__title">Live stock levels</p><p class="hk-benefit-tile__text">Real-time availability</p></li>
+            <li class="hk-benefit-tile"><span class="material-symbols-rounded" aria-hidden="true">deployed_code</span><p class="hk-benefit-tile__title">Unbranded samples</p><p class="hk-benefit-tile__text">Show clients the product</p></li>
+            <li class="hk-benefit-tile"><span class="material-symbols-rounded" aria-hidden="true">local_shipping</span><p class="hk-benefit-tile__title">White-label delivery</p><p class="hk-benefit-tile__text">Ships under your brand</p></li>
+          </ul>
+        </div>
+        <div class="hk-bulk-card hk-bulk-card--v2 hk-bulk-card--mascot">
+          <img class="hk-bulk-card__mascot-img" src="assets/images/mascots/hak-mascot.webp" alt="" width="605" height="960" loading="lazy">
+          <div class="hk-bulk-card__head">
+            <span class="hk-eyebrow">For businesses</span>
+            <h2 class="hk-h3" id="bulk-title">Planning a bulk order?</h2>
+          </div>
+          <p>Get a written quotation and artwork mock-up for your requirements.</p>
+          <div class="hk-bulk-card__actions">
+            <a class="hk-btn hk-btn--accent hk-btn--lg" href="#" data-route="request-a-quote">Request a quote</a>
+            <button type="button" class="hk-btn hk-btn--secondary hk-btn--lg" data-hk-dialog-open="callback-dialog">Request a callback</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 17 · About HAK Plus (client reference v0.15.0) -->
+    <section class="hk-about-band" id="about" aria-labelledby="about-title">
+      <img src="assets/images/brand/about-hak-plus.webp" alt="" width="2000" height="667" loading="lazy">
+      <div class="hk-container hk-about-band__inner">
+        <div class="hk-about-card">
+          <span class="hk-eyebrow">About HAK Plus</span>
+          <h2 class="hk-h3" id="about-title">Corporate gifting, from sourcing to delivery</h2>
+          <p>HAK Plus helps businesses across the UAE source branded merchandise their teams and clients value, with in-house printing and a single point of contact.</p>
+          <a class="hk-btn hk-btn--lg" href="#" data-route="about">More about us</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- 18 · Certifications -->
+    <section id="certifications" aria-labelledby="cert-title">
+      <div class="hk-container hk-cert-strip">
+        <h2 class="hk-cert-strip__title" id="cert-title">Certified and accredited</h2>
+        <div class="hk-cert"><span class="hk-cert__mark" aria-hidden="true"><span class="material-symbols-rounded">verified</span></span><div><p class="hk-cert__name">ISO 9001:2015</p><p class="hk-cert__text">Quality management</p></div></div>
+        <div class="hk-cert"><span class="hk-cert__mark" aria-hidden="true"><span class="material-symbols-rounded">eco</span></span><div><p class="hk-cert__name">ISO 14001:2015</p><p class="hk-cert__text">Environmental management</p></div></div>
+        <div class="hk-cert"><span class="hk-cert__mark" aria-hidden="true"><span class="material-symbols-rounded">health_and_safety</span></span><div><p class="hk-cert__name">ISO 45001:2018</p><p class="hk-cert__text">Health and safety</p></div></div>
+        <div class="hk-cert"><span class="hk-cert__mark" aria-hidden="true"><span class="material-symbols-rounded">account_balance</span></span><div><p class="hk-cert__name">Dubai Chamber</p><p class="hk-cert__text">Registered member</p></div></div>
+      </div>
+    </section>
+
+    <!-- 19 · Blogs (v0.18.0: three equal article cards) -->
+    <section class="hk-section" id="blogs" aria-labelledby="blogs-title">
+      <div class="hk-container">
+        <div class="hk-section-head">
+          <div class="hk-section-head__text"><span class="hk-eyebrow">Blogs and insights</span><h2 class="hk-h2" id="blogs-title">Ideas for better gifting</h2></div>
+          <a class="hk-link--editorial" href="#" data-route="blog">View all articles<span class="material-symbols-rounded icon-dir" aria-hidden="true">arrow_forward</span></a>
+        </div>
+        <ul class="hk-article-grid" role="list">
+          <li class="hk-article hk-article--v2"><div class="hk-article__media"><img src="assets/images/blog/ramadan-eid-employee-gifts.webp" alt="" width="1000" height="1000" loading="lazy"></div><div class="hk-article__body"><p class="hk-article__meta"><span class="hk-article__meta-item"><span class="material-symbols-rounded" aria-hidden="true">calendar_today</span><time datetime="2026-11-12">12 Nov 2026</time></span><span class="hk-article__meta-item"><span class="material-symbols-rounded" aria-hidden="true">person</span><span>By <strong>HAK Plus</strong></span></span></p><h3 class="hk-article__title"><a href="#" data-route="blog/planning-employee-gifts-ramadan-eid">Planning employee gifts for Ramadan and Eid</a></h3><p class="hk-article__excerpt">How to choose thoughtful, culturally appropriate gifts for your teams, and how far ahead to plan so branded sets arrive on time.</p><span class="hk-article__more" aria-hidden="true">Read more<span class="material-symbols-rounded icon-dir">arrow_forward</span></span></div></li>
+          <li class="hk-article hk-article--v2"><div class="hk-article__media"><img src="assets/images/blog/choose-printing-method.webp" alt="" width="1000" height="1000" loading="lazy"></div><div class="hk-article__body"><p class="hk-article__meta"><span class="hk-article__meta-item"><span class="material-symbols-rounded" aria-hidden="true">calendar_today</span><time datetime="2026-10-28">28 Oct 2026</time></span><span class="hk-article__meta-item"><span class="material-symbols-rounded" aria-hidden="true">person</span><span>By <strong>HAK Plus</strong></span></span></p><h3 class="hk-article__title"><a href="#" data-route="blog/choose-printing-method">How to choose the right printing method</a></h3><p class="hk-article__excerpt">Laser engraving, embroidery, screen, pad, UV or heat transfer: a quick guide to matching the branding method to material, quantity and finish.</p><span class="hk-article__more" aria-hidden="true">Read more<span class="material-symbols-rounded icon-dir">arrow_forward</span></span></div></li>
+          <li class="hk-article hk-article--v2"><div class="hk-article__media"><img src="assets/images/blog/eco-friendly-gifts.webp" alt="" width="1000" height="1000" loading="lazy"></div><div class="hk-article__body"><p class="hk-article__meta"><span class="hk-article__meta-item"><span class="material-symbols-rounded" aria-hidden="true">calendar_today</span><time datetime="2026-10-09">9 Oct 2026</time></span><span class="hk-article__meta-item"><span class="material-symbols-rounded" aria-hidden="true">person</span><span>By <strong>HAK Plus</strong></span></span></p><h3 class="hk-article__title"><a href="#" data-route="blog/eco-friendly-gifts">Eco-friendly gifts your clients will keep</a></h3><p class="hk-article__excerpt">Bamboo, cork, jute and recycled materials that look premium, last longer and reflect your sustainability commitments.</p><span class="hk-article__more" aria-hidden="true">Read more<span class="material-symbols-rounded icon-dir">arrow_forward</span></span></div></li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- 20 · Newsletter (card straddling the footer; four fields, work email primary) -->
+    <section class="hk-newsletter-band" id="newsletter" aria-labelledby="newsletter-title">
+      <div class="hk-container">
+        <div class="hk-newsletter hk-newsletter--card hk-newsletter--dark">
+          <div class="hk-newsletter__intro">
+            <h2 class="hk-h3" id="newsletter-title">Stay ahead of your next gifting campaign.</h2>
+            <p>New collections, corporate gifting ideas and business updates from HAK Plus.</p>
+          </div>
+          <form id="newsletter-form" data-hk-validate data-hk-custom-success aria-labelledby="newsletter-title">
+            <div class="hk-form-grid hk-form-grid--compact">
+              <div class="hk-field hk-field--float"><input class="hk-input" id="nl-name" name="name" type="text" autocomplete="name" placeholder=" "><label class="hk-label" for="nl-name">Full name</label></div>
+              <div class="hk-field hk-field--float"><input class="hk-input" id="nl-company" name="company" type="text" autocomplete="organization" placeholder=" "><label class="hk-label" for="nl-company">Company name</label></div>
+              <div class="hk-field hk-field--float"><input class="hk-input" id="nl-email" name="email" type="email" required autocomplete="email" inputmode="email" placeholder="name@company.com" data-hk-name="your work email"><label class="hk-label" for="nl-email">Work email<span class="hk-label__req" aria-hidden="true">*</span><span class="sr-only"> (required)</span></label></div>
+              <div class="hk-field hk-field--float"><input class="hk-input" id="nl-phone" name="phone" type="tel" autocomplete="tel" inputmode="tel" dir="ltr" placeholder="+971 50 123 4567" pattern="^\+?[0-9][0-9\s\-]{6,17}$" data-hk-name="a phone number" data-hk-pattern-msg="Enter a phone number with 7–15 digits, including the country code if outside the UAE." aria-describedby="nl-phone-help"><label class="hk-label" for="nl-phone">Phone number</label><p class="sr-only" id="nl-phone-help">UAE and international numbers accepted, for example +971 50 123 4567.</p></div>
+            </div>
+            <p class="hk-form-note"><span aria-hidden="true">*</span> Required field</p>
+            <div class="hk-newsletter__footer">
+              <label class="hk-check"><input type="checkbox" id="nl-consent" name="consent" required data-hk-name="consent" data-hk-required-msg="Tick the box to agree to receive updates."><span>I agree to receive marketing emails from HAK Plus and can unsubscribe at any time. <a class="hk-link hk-nowrap" href="#" data-route="privacy-policy">Privacy policy</a></span></label>
+              <button type="submit" class="hk-btn hk-btn--accent hk-btn--lg"><span>Subscribe for updates</span></button>
+            </div>
+            <div class="hk-alert hk-alert--info" data-hk-newsletter-status role="status" hidden style="margin-block-start:var(--hk-space-4)"></div>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- 21 · Footer (client reference v0.15.0) -->
+  <footer class="hk-footer hk-footer--v2 hk-footer--light" id="footer">
+    <div class="hk-container">
+      <div class="hk-footer__top">
+        <div class="hk-footer__about">
+          <a href="index.html" aria-label="HAK Plus home" class="hk-footer__logo"><img src="assets/images/brand/hak-plus-logo.png" alt="" width="439" height="240"></a>
+          <p class="hk-footer__tagline">One-stop shop for all merchandise, from product to print.</p>
+          <p class="hk-footer__title hk-footer__follow">Follow us</p>
+          <ul class="hk-footer__social" role="list"><li><a href="#" data-route="social/instagram" aria-label="HAK Plus on Instagram"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 7.3a4.7 4.7 0 1 0 0 9.4 4.7 4.7 0 0 0 0-9.4Zm0 7.75a3.05 3.05 0 1 1 0-6.1 3.05 3.05 0 0 1 0 6.1Zm5.98-7.94a1.1 1.1 0 1 1-2.2 0 1.1 1.1 0 0 1 2.2 0ZM21.1 8.2c-.07-1.47-.4-2.78-1.48-3.85C18.55 3.28 17.24 2.95 15.77 2.88c-1.52-.09-6.07-.09-7.59 0-1.47.07-2.77.4-3.85 1.47C3.25 5.42 2.93 6.73 2.85 8.2c-.09 1.52-.09 6.07 0 7.59.07 1.47.4 2.78 1.48 3.85 1.08 1.07 2.38 1.4 3.85 1.48 1.52.09 6.07.09 7.59 0 1.47-.07 2.78-.4 3.85-1.48 1.07-1.07 1.4-2.38 1.48-3.85.09-1.52.09-6.07 0-7.59Zm-1.98 9.22a3.1 3.1 0 0 1-1.75 1.75c-1.21.48-4.08.37-5.42.37s-4.21.1-5.42-.37a3.1 3.1 0 0 1-1.75-1.75c-.48-1.21-.37-4.08-.37-5.42s-.1-4.21.37-5.42a3.1 3.1 0 0 1 1.75-1.75c1.21-.48 4.08-.37 5.42-.37s4.21-.1 5.42.37a3.1 3.1 0 0 1 1.75 1.75c.48 1.21.37 4.08.37 5.42s.11 4.21-.37 5.42Z"/></svg></a></li><li><a href="#" data-route="social/facebook" aria-label="HAK Plus on Facebook"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M13.5 21v-7.7h2.6l.4-3h-3V8.4c0-.87.24-1.46 1.49-1.46h1.59V4.26A21 21 0 0 0 14.27 4.1c-2.3 0-3.87 1.4-3.87 3.97v2.23H7.8v3h2.6V21h3.1Z"/></svg></a></li><li><a href="#" data-route="social/youtube" aria-label="HAK Plus on YouTube"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M21.58 7.19a2.5 2.5 0 0 0-1.76-1.77C18.25 5 12 5 12 5s-6.25 0-7.82.42a2.5 2.5 0 0 0-1.76 1.77C2 8.76 2 12 2 12s0 3.24.42 4.81a2.5 2.5 0 0 0 1.76 1.77C5.75 19 12 19 12 19s6.25 0 7.82-.42a2.5 2.5 0 0 0 1.76-1.77C22 15.24 22 12 22 12s0-3.24-.42-4.81ZM10 15V9l5.2 3L10 15Z"/></svg></a></li><li><a href="#" data-route="social/linkedin" aria-label="HAK Plus on LinkedIn"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4.98 3.5a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5ZM3 9.75h4v11H3v-11Zm7 0h3.8v1.5h.05c.53-1 1.83-2.05 3.77-2.05 4.03 0 4.78 2.65 4.78 6.1v5.45h-4v-4.83c0-1.15-.02-2.63-1.6-2.63-1.6 0-1.85 1.25-1.85 2.55v4.91h-4v-11Z"/></svg></a></li></ul>
+        </div>
+        <div class="hk-footer__cols hk-footer__cols--v3">
+          <div class="hk-footer__col"><button type="button" class="hk-footer__acc-trigger" aria-expanded="false">Shop<span class="material-symbols-rounded" aria-hidden="true">expand_more</span></button><p class="hk-footer__title">Shop</p><ul class="hk-footer__links" role="list"><li><a class="hk-link--footer" href="#" data-route="category/drinkware">Drinkware</a></li><li><a class="hk-link--footer" href="#" data-route="category/gadgets">Gadgets</a></li><li><a class="hk-link--footer" href="#" data-route="category/bags">Bags</a></li><li><a class="hk-link--footer" href="#" data-route="category/stationery">Stationery</a></li><li><a class="hk-link--footer" href="#" data-route="category/lanyards">Lanyards</a></li><li><a class="hk-link--footer" href="#" data-route="category/accessories">Other accessories</a></li><li><a class="hk-link--footer" href="#featured">New arrivals</a></li><li><a class="hk-link--footer" href="#" data-route="offers">Special offers</a></li><li><a class="hk-link--footer" href="#" data-route="offers/clearance">Clearance sale</a></li><li><a class="hk-link--footer" href="#" data-hk-commerce-link>Shop online<span class="sr-only"> (external online store)</span></a></li></ul></div>
+          <div class="hk-footer__col"><button type="button" class="hk-footer__acc-trigger" aria-expanded="false">Services<span class="material-symbols-rounded" aria-hidden="true">expand_more</span></button><p class="hk-footer__title">Services</p><ul class="hk-footer__links" role="list"><li><a class="hk-link--footer" href="#" data-route="catalogue">HAK catalogue</a></li><li><a class="hk-link--footer" href="#" data-route="reseller/white-label-catalogue">White-labelled catalogue</a></li><li><a class="hk-link--footer" href="#" data-route="reseller/marketing-materials">Marketing material</a></li><li><a class="hk-link--footer" href="#printing">Printing techniques</a></li><li><a class="hk-link--footer" href="#bulk-orders">Request a quote</a></li><li><button type="button" class="hk-link--footer" data-hk-dialog-open="callback-dialog">Request a callback</button></li></ul></div>
+          <div class="hk-footer__col"><button type="button" class="hk-footer__acc-trigger" aria-expanded="false">Company<span class="material-symbols-rounded" aria-hidden="true">expand_more</span></button><p class="hk-footer__title">Company</p><ul class="hk-footer__links" role="list"><li><a class="hk-link--footer" href="#about">About HAK Plus</a></li><li><a class="hk-link--footer" href="#certifications">Certifications</a></li><li><a class="hk-link--footer" href="#blogs">Blogs</a></li><li><a class="hk-link--footer" href="#" data-route="media">Media</a></li><li><a class="hk-link--footer" href="https://www.hakgifts.com/" target="_blank" rel="noopener">Reseller portal sign-in<span class="sr-only"> (opens in a new tab)</span></a></li><li><a class="hk-link--footer" href="#" data-route="reseller-registration">Register as a reseller</a></li></ul></div>
+          <div class="hk-footer__col hk-footer__col--contact" id="footer-contact"><button type="button" class="hk-footer__acc-trigger" aria-expanded="false">Contact us<span class="material-symbols-rounded" aria-hidden="true">expand_more</span></button><p class="hk-footer__title">Contact us</p>
+            <ul class="hk-footer__links hk-footer__contact" role="list">
+              <li><span class="material-symbols-rounded" aria-hidden="true">location_on</span><address><strong>HAK headquarters</strong><br>Warehouse 1, 2, 3, Wadi Al Rafesa St, opposite Alma Supermarket, Industrial Area 17, Sharjah, United Arab Emirates</address></li>
+              <li><span class="material-symbols-rounded" aria-hidden="true">schedule</span><span>Working hours: 9 AM to 6 PM</span></li>
+              <li><span class="material-symbols-rounded" aria-hidden="true">call</span><a href="tel:+971521294390" dir="ltr">+971 52 129 4390</a></li>
+              <li><span class="material-symbols-rounded" aria-hidden="true">mail</span><a href="mailto:enquiries@hakplus.com">enquiries@hakplus.com</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="hk-footer__bottom">
+        <p>© 2026 HAK Plus. All rights reserved.</p>
+        <ul class="hk-footer__legal" role="list"><li><a href="#" data-route="privacy-policy">Privacy policy</a></li><li><a href="#" data-route="terms">Terms and conditions</a></li></ul>
+      </div>
+    </div>
+  </footer>
+
+  <button type="button" class="hk-btn hk-btn--icon hk-btn--neutral hk-backtop" aria-label="Back to top"><span class="material-symbols-rounded" aria-hidden="true">arrow_upward</span></button>
+
+  <!-- Prototype-only review switch (not part of the production design) -->
+  <div class="hp-review" data-hk-review-toggle-wrap>
+    <button type="button" class="hp-review__btn" aria-pressed="true" data-hk-review-toggle><span class="material-symbols-rounded icon-20" aria-hidden="true">rate_review</span><span data-label>Internal review view</span></button>
+  </div>
+
+  <!-- Mobile navigation -->
+  <dialog class="hk-dialog hk-dialog--drawer hk-dialog--drawer-start" id="mobile-nav" aria-label="Menu">
+    <div class="hk-mnav">
+      <div class="hk-mnav__head"><img class="hk-logo-img hk-logo-img--sm" src="assets/images/brand/hak-plus-logo.png" alt="HAK Plus" width="439" height="240"><button type="button" class="hk-btn hk-btn--icon hk-btn--ghost hk-dialog__close" data-hk-dialog-close aria-label="Close menu"><span class="material-symbols-rounded" aria-hidden="true">close</span></button></div>
+      <div class="hk-mnav__viewport">
+        <div class="hk-mnav__panel is-active" id="mn-root">
+          <ul class="hk-mnav__list" role="list">
+            <li><button type="button" class="hk-mnav__item" data-hk-mnav-target="mn-cats">All categories<span class="material-symbols-rounded icon-dir" aria-hidden="true">chevron_right</span></button></li>
+            <li><a class="hk-mnav__item" href="#" data-route="on-demand">On demand</a></li>
+            <li><a class="hk-mnav__item" href="#occasions" data-hk-dialog-close>Occasions</a></li>
+            <li><a class="hk-mnav__item" href="#featured" data-hk-dialog-close>Best sellers</a></li>
+            <li><a class="hk-mnav__item" href="#printing" data-hk-dialog-close>Printing</a></li>
+            <li><a class="hk-mnav__item" href="#bulk-orders" data-hk-dialog-close>Reseller tools</a></li>
+          </ul>
+          <div class="hk-mnav__divider"></div>
+          <ul class="hk-mnav__list" role="list">
+            <li><a class="hk-mnav__item hk-mnav__item--sub" href="#" data-route="account"><span>Account</span><span class="material-symbols-rounded" aria-hidden="true">person</span></a></li>
+            <li><a class="hk-mnav__item hk-mnav__item--sub" href="#" data-route="compare"><span>Compare</span><span class="material-symbols-rounded" aria-hidden="true">compare_arrows</span></a></li>
+            <li><a class="hk-mnav__item hk-mnav__item--sub" href="#" data-route="wishlist"><span>Wishlist</span><span class="material-symbols-rounded" aria-hidden="true">favorite</span></a></li>
+            <li><a class="hk-mnav__item hk-mnav__item--sub" href="#" data-route="catalogue"><span>Download catalogue 2025–26</span><span class="material-symbols-rounded" aria-hidden="true">download</span></a></li>
+            <li><a class="hk-mnav__item hk-mnav__item--sub" href="https://www.hakgifts.com/" target="_blank" rel="noopener"><span>Reseller login<span class="sr-only"> (opens in a new tab)</span></span><span class="material-symbols-rounded" aria-hidden="true">storefront</span></a></li>
+            <li><a class="hk-mnav__item hk-mnav__item--sub" href="#" data-route="reseller-registration"><span>Register as a reseller</span><span class="material-symbols-rounded" aria-hidden="true">how_to_reg</span></a></li>
+          </ul>
+        </div>
+        <div class="hk-mnav__panel" id="mn-cats">
+          <button type="button" class="hk-mnav__back" data-hk-mnav-back><span class="material-symbols-rounded icon-20 icon-dir" aria-hidden="true">arrow_back</span>Back to menu</button>
+          <p class="hk-mnav__title">All categories</p>
+          <ul class="hk-mnav__list" role="list">
+            <li><a class="hk-mnav__item" href="#" data-route="category/drinkware">Drinkware</a></li>
+            <li><a class="hk-mnav__item" href="#" data-route="category/bags">Bags</a></li>
+            <li><a class="hk-mnav__item" href="#" data-route="category/gadgets">Gadgets</a></li>
+            <li><a class="hk-mnav__item" href="#" data-route="category/stationery">Stationery</a></li>
+            <li><a class="hk-mnav__item" href="#" data-route="category/apparel">Apparel</a></li>
+            <li><a class="hk-mnav__item" href="#" data-route="category/lanyards">Lanyards and accessories</a></li>
+            <li><a class="hk-mnav__item" href="#" data-route="category/gift-sets">Gift sets</a></li>
+            <li><a class="hk-mnav__item" href="#" data-route="category/promotional">Promotional products</a></li>
+            <li><a class="hk-mnav__item" href="#" data-route="category/kids">Kids</a></li>
+            <li><a class="hk-mnav__item hk-mnav__item--sub hk-mnav__item--external" href="#" data-route="categories">Browse full catalogue</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="hk-mnav__footer">
+        <a class="hk-btn hk-btn--secondary hk-btn--block" href="#" data-hk-commerce-link><span class="material-symbols-rounded" aria-hidden="true">shopping_bag</span>Shop online<span class="material-symbols-rounded icon-20" aria-hidden="true">open_in_new</span><span class="sr-only"> (external online store)</span></a>
+        <button type="button" class="hk-btn hk-btn--block" data-hk-dialog-open="callback-dialog"><span class="material-symbols-rounded" aria-hidden="true">call</span>Request a callback</button>
+      </div>
+    </div>
+  </dialog>
+
+  <!-- Mobile search sheet -->
+  <dialog class="hk-dialog hk-dialog--sheet" id="search-sheet" aria-labelledby="search-sheet-title" style="max-block-size:90dvh">
+    <div class="hk-dialog__header"><h2 class="hk-dialog__title" id="search-sheet-title">Search</h2><button type="button" class="hk-btn hk-btn--icon hk-btn--ghost hk-dialog__close" data-hk-dialog-close aria-label="Close search"><span class="material-symbols-rounded" aria-hidden="true">close</span></button></div>
+    <div class="hk-dialog__body" style="min-block-size:22rem">
+      <div class="hk-search" data-hk-search>
+        <label class="sr-only" for="m-search">Search products, categories or SKU</label>
+        <div class="hk-input-group"><span class="hk-input-group__icon"><span class="material-symbols-rounded icon-20" aria-hidden="true">search</span></span><input class="hk-input" id="m-search" type="search" placeholder="Products, categories or SKU" autocomplete="off" autofocus><button type="button" class="hk-input-group__action hk-search__clear" aria-label="Clear search" hidden><span class="material-symbols-rounded icon-20" aria-hidden="true">close</span></button></div>
+        <div class="hk-search__panel" id="m-search-panel" role="listbox" aria-label="Search suggestions" hidden style="position:static;box-shadow:none;border:0;margin-block-start:var(--hk-space-2)"></div>
+        <p class="sr-only" role="status" aria-live="polite" data-hk-search-status></p>
+      </div>
+    </div>
+  </dialog>
+
+  <!-- Callback request (prototype: validation only, nothing is sent) -->
+  <dialog class="hk-dialog" id="callback-dialog" aria-labelledby="callback-title">
+    <form id="callback-form" data-hk-validate data-hk-custom-success>
+      <div class="hk-dialog__header"><h2 class="hk-dialog__title" id="callback-title">Request a callback</h2><button type="button" class="hk-btn hk-btn--icon hk-btn--ghost hk-dialog__close" data-hk-dialog-close aria-label="Close"><span class="material-symbols-rounded" aria-hidden="true">close</span></button></div>
+      <div class="hk-dialog__body">
+        <p class="hk-body-sm hk-text-secondary" style="margin-block-end:var(--hk-space-5)">Leave your details and our team will call you back during working hours.</p>
+        <div class="hk-form-grid">
+          <div class="hk-field"><label class="hk-label" for="cb-name">Full name<span class="hk-label__req" aria-hidden="true">*</span><span class="sr-only"> (required)</span></label><input class="hk-input" id="cb-name" name="name" required autocomplete="name" data-hk-name="your full name"></div>
+          <div class="hk-field"><label class="hk-label" for="cb-company">Company name <span class="hk-label__opt">(optional)</span></label><input class="hk-input" id="cb-company" name="company" autocomplete="organization"></div>
+          <div class="hk-field"><label class="hk-label" for="cb-phone">Phone number<span class="hk-label__req" aria-hidden="true">*</span><span class="sr-only"> (required)</span></label><input class="hk-input" id="cb-phone" name="phone" type="tel" required autocomplete="tel" inputmode="tel" dir="ltr" placeholder="+971 50 123 4567" pattern="^\+?[0-9][0-9\s\-]{6,17}$" data-hk-name="your phone number" data-hk-pattern-msg="Enter a phone number with 7–15 digits."></div>
+          <div class="hk-field"><label class="hk-label" for="cb-topic">Topic</label><select class="hk-select" id="cb-topic" name="topic"><option>Corporate gifting advice</option><option>Bulk order or quotation</option><option>Printing and branding</option><option>Reseller enquiry</option><option>Something else</option></select></div>
+        </div>
+        <div class="hk-alert hk-alert--info" data-hk-callback-status role="status" hidden style="margin-block-start:var(--hk-space-4)"></div>
+      </div>
+      <div class="hk-dialog__footer"><button type="button" class="hk-btn hk-btn--ghost" data-hk-dialog-close>Cancel</button><button type="submit" class="hk-btn"><span>Request callback</span></button></div>
+    </form>
+  </dialog>
+
+  <script src="assets/js/main.js?v=0.73.1"></script>
+  <script src="assets/js/home.js?v=0.73.1"></script>
+</body>
+</html>
