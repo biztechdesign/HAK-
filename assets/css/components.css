@@ -2512,7 +2512,7 @@ main .hk-section-head, .hk-split-head { margin-block-end: var(--hk-space-8); }
 @media (max-width: 639px) {
   .hk-bulk-card--mascot { --mascot-w: 7.5rem; padding-inline-end: var(--hk-space-6); }
   .hk-bulk-card--mascot .hk-bulk-card__head, .hk-bulk-card--mascot > p { padding-inline-end: calc(var(--mascot-w) + var(--hk-space-1)); }
-  .hk-bulk-card__mascot-img { inset-block: var(--hk-space-4) auto; block-size: auto; aspect-ratio: 605 / 960; object-position: 100% 0%; }
+  .hk-bulk-card__mascot-img { inset-block: var(--hk-space-4) auto; block-size: auto; aspect-ratio: 640 / 1000; object-position: 100% 0%; }
 }
 
 /* v0.38.0 — reversed logo on the dark footer (no white plate) (D-78) */
