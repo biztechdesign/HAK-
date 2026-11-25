@@ -3414,10 +3414,20 @@ main .hk-section-head, .hk-split-head { margin-block-end: var(--hk-space-8); }
 .hk-about-cert > span { display: flex; flex-direction: column; min-inline-size: 0; }
 .hk-about-cert__name { font-size: var(--hk-text-body-sm); font-weight: var(--hk-weight-semibold); line-height: 1.3; color: var(--hk-color-text-primary); }
 .hk-about-cert__text { font-size: 0.8125rem; line-height: 1.4; color: var(--hk-color-text-secondary); }
-.hk-about-card .hk-about-card__certs + .hk-btn { margin-block-start: var(--hk-space-2); }
 
 /* D-123 (client): logos only, one row — no names or descriptions beside them. The alt text names each certificate. */
 .hk-about-certs { display: flex; flex-wrap: nowrap; gap: var(--hk-space-4); grid-template-columns: none; }
 .hk-about-cert { flex: 0 1 3.5rem; min-inline-size: 0; }
 .hk-about-cert img { inline-size: 100%; max-inline-size: 3.5rem; block-size: auto; aspect-ratio: 1; }
 @media (max-width: 379px) { .hk-about-certs { gap: var(--hk-space-3); } .hk-about-cert { flex-basis: 3rem; } }
+
+/* D-124: About card order — eyebrow, heading, description, "More about us" (24 px below the copy), then a
+   subordinate credibility footer: divider with 24 px above and below, label, and four marks spread evenly. */
+.hk-about-card { box-shadow: var(--hk-shadow-1); }
+.hk-about-card > .hk-btn .material-symbols-rounded { font-size: 20px; }
+.hk-about-card__certs { margin-block-start: var(--hk-space-2); padding-block-start: var(--hk-space-6); }
+.hk-about-card__certs-title { color: var(--hk-color-text-secondary); font-weight: var(--hk-weight-medium); }
+.hk-about-certs { justify-content: space-between; gap: var(--hk-space-3); }
+.hk-about-cert { flex: 0 0 3.75rem; }
+.hk-about-cert img { max-inline-size: none; inline-size: 3.75rem; block-size: 3.75rem; }
+@media (max-width: 379px) { .hk-about-cert { flex-basis: 3.25rem; } .hk-about-cert img { inline-size: 3.25rem; block-size: 3.25rem; } }
