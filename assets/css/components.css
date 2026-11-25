@@ -2493,7 +2493,7 @@ main .hk-section-head, .hk-split-head { margin-block-end: var(--hk-space-8); }
    v0.36.0 — Bulk card with the approved HAK Plus mascot (D-77)
    Mascot runs the full card height on the right; text and buttons narrow to fit.
    ========================================================================== */
-.hk-bulk-card--mascot { --mascot-w: clamp(6rem, 28%, 8.5rem); position: relative; overflow: hidden; padding-inline-end: calc(var(--mascot-w) + var(--hk-space-2)); }
+.hk-bulk-card--mascot { --mascot-w: clamp(8.5rem, 40%, 12.5rem); position: relative; overflow: hidden; padding-inline-end: calc(var(--mascot-w) + var(--hk-space-2)); }
 .hk-bulk-card--mascot .hk-bulk-card__head { padding-inline-end: 0; }
 .hk-bulk-card__mascot-img {
   position: absolute; inset-block: var(--hk-space-3) 0; inset-inline-end: 0; inline-size: var(--mascot-w); block-size: calc(100% - var(--hk-space-3));
@@ -2506,11 +2506,11 @@ main .hk-section-head, .hk-split-head { margin-block-end: var(--hk-space-8); }
 .hk-bulk-card--v2 .hk-bulk-card__actions .hk-btn { inline-size: auto; }
 @media (max-width: 479px) { .hk-bulk-card--v2 .hk-bulk-card__actions .hk-btn { flex: 1 1 100%; } }
 @media (min-width: 1024px) { .hk-bulk-card--v2 { padding-block: var(--hk-space-10); } }
-@media (max-width: 399px) { .hk-bulk-card--mascot { --mascot-w: 5rem; } }
+@media (max-width: 399px) { .hk-bulk-card--mascot { --mascot-w: 7.5rem; } }
 /* v0.36.1 — reseller and bulk cards side by side only from 1280 px; phones: mascot beside the text, buttons full width below */
 @media (min-width: 1024px) and (max-width: 1279px) { .hk-biz-split { grid-template-columns: minmax(0, 1fr); } }
 @media (max-width: 639px) {
-  .hk-bulk-card--mascot { --mascot-w: 5rem; padding-inline-end: var(--hk-space-6); }
+  .hk-bulk-card--mascot { --mascot-w: 7.5rem; padding-inline-end: var(--hk-space-6); }
   .hk-bulk-card--mascot .hk-bulk-card__head, .hk-bulk-card--mascot > p { padding-inline-end: calc(var(--mascot-w) + var(--hk-space-1)); }
   .hk-bulk-card__mascot-img { inset-block: var(--hk-space-4) auto; block-size: auto; aspect-ratio: 605 / 960; object-position: 100% 0%; }
 }
@@ -3023,7 +3023,7 @@ main .hk-section-head, .hk-split-head { margin-block-end: var(--hk-space-8); }
 @media (min-width: 1280px) {
   .hk-biz-split { grid-template-columns: minmax(0, 11fr) minmax(0, 8fr); }
   .hk-reseller-card--v2 { column-gap: var(--hk-space-10); }
-  .hk-bulk-card--mascot { overflow: visible; --mascot-w: 12rem; --mascot-bleed: var(--hk-space-5); padding-inline-end: calc(var(--mascot-w) - var(--mascot-bleed) + var(--hk-space-2)); }
+  .hk-bulk-card--mascot { overflow: visible; --mascot-w: 18rem; --mascot-bleed: var(--hk-space-5); padding-inline-end: calc(var(--mascot-w) - var(--mascot-bleed) + var(--hk-space-2)); }
   .hk-bulk-card--mascot .hk-bulk-card__mascot-img {
     inset-block: auto 0; inset-inline-end: calc(var(--mascot-bleed) * -1);
     inline-size: var(--mascot-w); block-size: calc(100% + var(--hk-space-12)); object-fit: contain; object-position: 100% 100%;
@@ -3147,7 +3147,7 @@ main .hk-section-head, .hk-split-head { margin-block-end: var(--hk-space-8); }
 @media (min-width: 1280px) {
   .hk-biz-split { grid-template-columns: minmax(0, 13fr) minmax(0, 7fr); }
   .hk-reseller-card--v2 { column-gap: var(--hk-space-10); }
-  .hk-bulk-card--mascot { overflow: hidden; --mascot-w: 8.5rem; padding-inline-end: calc(var(--mascot-w) + var(--hk-space-2)); }
+  .hk-bulk-card--mascot { overflow: hidden; --mascot-w: 13rem; padding-inline-end: calc(var(--mascot-w) + var(--hk-space-2)); }
   .hk-bulk-card--mascot .hk-bulk-card__mascot-img {
     inset-block: auto 0; inset-inline-end: var(--hk-space-2); inline-size: var(--mascot-w); block-size: calc(100% - var(--hk-space-6));
     object-fit: contain; object-position: 100% 100%;
@@ -3178,7 +3178,7 @@ main .hk-section-head, .hk-split-head { margin-block-end: var(--hk-space-8); }
 /* v0.57.0 — overlapping mascot restored (client preference over D-95); benefit text on one line (D-96) */
 @media (min-width: 1280px) {
   .hk-biz-split { grid-template-columns: minmax(0, 11fr) minmax(0, 8fr); }
-  .hk-bulk-card--mascot { overflow: visible; --mascot-w: 12rem; --mascot-bleed: var(--hk-space-5); padding-inline-end: calc(var(--mascot-w) - var(--mascot-bleed) + var(--hk-space-2)); }
+  .hk-bulk-card--mascot { overflow: visible; --mascot-w: 18rem; --mascot-bleed: var(--hk-space-5); padding-inline-end: calc(var(--mascot-w) - var(--mascot-bleed) + var(--hk-space-2)); }
   .hk-bulk-card--mascot .hk-bulk-card__mascot-img {
     inset-block: auto 0; inset-inline-end: calc(var(--mascot-bleed) * -1); inline-size: var(--mascot-w);
     block-size: calc(100% + var(--hk-space-12)); object-fit: contain; object-position: 100% 100%;
@@ -3230,13 +3230,13 @@ main .hk-section-head, .hk-split-head { margin-block-end: var(--hk-space-8); }
 @media (min-width: 640px) { .hk-recipient-card__body { max-inline-size: 46%; padding-inline-end: 0; } }
 @media (min-width: 640px) and (max-width: 1279px) { .hk-recipient-card__body { max-inline-size: 44%; } }
 
-/* v0.69.0 — recipient checklist (D-108, supersedes D-101/D-102 checklist): informational, so a plain royal-indigo check,
-   18 px, no circle; green stays reserved for success states. 8 px icon gap, 8 px row gap, Inter 14 px. */
+/* v0.73.3 — recipient checklist (D-119, client preference; restores the D-102 treatment over D-108):
+   white check on a solid green circle, 18 px circle. 8 px icon gap, 8 px row gap, Inter 14 px. */
 .hk-recipient-card__list { gap: var(--hk-space-2); }
 .hk-recipient-card__list li { grid-template-columns: 1.125rem minmax(0, 1fr); column-gap: var(--hk-space-2); align-items: center; font-size: var(--hk-text-body-sm); }
 .hk-recipient-card__list .material-symbols-rounded {
-  inline-size: 1.125rem; font-size: 18px; line-height: 1; background: none; border-radius: 0;
-  color: var(--hk-color-action-primary); --ms-opsz: 20;
+  display: grid; place-items: center; inline-size: 1.125rem; block-size: 1.125rem; border-radius: 50%;
+  background: var(--hk-color-success); color: var(--hk-neutral-0); font-size: 14px; line-height: 1; --ms-opsz: 20;
   font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 20;
 }
 
@@ -3385,10 +3385,18 @@ main .hk-section-head, .hk-split-head { margin-block-end: var(--hk-space-8); }
 /* D-118: keep the overlapping mascot (client request). From 768 px the mascot sits on the card's bottom edge,
    rises above the copy and bleeds past the right edge, as on desktop; phones keep it inside the card. */
 @media (min-width: 768px) and (max-width: 1279px) {
-  .hk-bulk-card--mascot { overflow: visible; --mascot-w: 10rem; --mascot-bleed: var(--hk-space-3); padding-inline-end: calc(var(--mascot-w) - var(--mascot-bleed) + var(--hk-space-4)); }
+  .hk-bulk-card--mascot { overflow: visible; --mascot-w: 13rem; --mascot-bleed: var(--hk-space-3); padding-inline-end: calc(var(--mascot-w) - var(--mascot-bleed) + var(--hk-space-4)); }
   .hk-bulk-card--mascot .hk-bulk-card__mascot-img {
     inset-block: auto 0; inset-inline-end: calc(var(--mascot-bleed) * -1); inline-size: var(--mascot-w);
     block-size: calc(100% + var(--hk-space-10)); object-fit: contain; object-position: 100% 100%;
   }
   .hk-bulk-card--mascot .hk-bulk-card__head, .hk-bulk-card--mascot > p { padding-inline-end: 0; }
 }
+
+/* D-119: bulk-order buttons stack at the bottom of the card. From 1280 px (cards side by side) the bottom margin
+   matches what sits under "Become a reseller" (12 px gap + 44 px login link) minus what sits under "Request a quote"
+   (12 px gap + 48 px button), so both first buttons start at the same height. */
+.hk-bulk-card--v2 .hk-bulk-card__actions { display: grid; gap: var(--hk-space-3); margin-block-start: auto; padding-block-start: var(--hk-space-6); }
+.hk-bulk-card--v2 .hk-bulk-card__actions .hk-btn { inline-size: 100%; }
+@media (max-width: 479px) { .hk-bulk-card--v2 .hk-bulk-card__actions .hk-btn { flex: none; } }
+@media (min-width: 1280px) { .hk-bulk-card--v2 .hk-bulk-card__actions { margin-block-end: calc(var(--hk-touch-target) - var(--hk-btn-h-lg)); } }
