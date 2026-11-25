@@ -398,6 +398,8 @@
 .hk-tabs--compact .hk-tabs__list { gap: var(--hk-space-4); }
 .hk-tabs--compact .hk-tab { font-size: var(--hk-text-body-sm); }
 .hk-tabpanel { padding-block-start: var(--hk-space-6); }
+/* When the tabs sit in a section heading, the heading already sets the 24 px gap to content (D-121) */
+.hk-section-head ~ .hk-tabpanel { padding-block-start: 0; }
 .hk-tabpanel:focus-visible { outline-offset: 4px; }
 
 /* ==========================================================================
