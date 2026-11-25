@@ -3381,3 +3381,14 @@ main .hk-section-head, .hk-split-head { margin-block-end: var(--hk-space-8); }
 /* The consent error drops to its own line under the consent row instead of squeezing between checkbox and button */
 .hk-newsletter__footer > .hk-field-msg { order: 3; flex: 1 1 100%; margin: 0; }
 .hk-newsletter--dark .hk-form-grid--compact { row-gap: var(--hk-space-4); }
+
+/* D-118: keep the overlapping mascot (client request). From 768 px the mascot sits on the card's bottom edge,
+   rises above the copy and bleeds past the right edge, as on desktop; phones keep it inside the card. */
+@media (min-width: 768px) and (max-width: 1279px) {
+  .hk-bulk-card--mascot { overflow: visible; --mascot-w: 10rem; --mascot-bleed: var(--hk-space-3); padding-inline-end: calc(var(--mascot-w) - var(--mascot-bleed) + var(--hk-space-4)); }
+  .hk-bulk-card--mascot .hk-bulk-card__mascot-img {
+    inset-block: auto 0; inset-inline-end: calc(var(--mascot-bleed) * -1); inline-size: var(--mascot-w);
+    block-size: calc(100% + var(--hk-space-10)); object-fit: contain; object-position: 100% 100%;
+  }
+  .hk-bulk-card--mascot .hk-bulk-card__head, .hk-bulk-card--mascot > p { padding-inline-end: 0; }
+}
